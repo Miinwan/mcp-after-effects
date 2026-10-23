@@ -1,0 +1,1246 @@
+# Preset After Effects (.ffx)
+
+1242 items. Scanned at 2026-10-23T03:15:00.361Z.
+
+- [built-in] Adobe Express/In/Bungee In.ffx
+- [built-in] Adobe Express/In/Fade In.ffx
+- [built-in] Adobe Express/In/Flicker In.ffx
+- [built-in] Adobe Express/In/Grow In.ffx
+- [built-in] Adobe Express/In/Pop In.ffx
+- [built-in] Adobe Express/In/Shrink In.ffx
+- [built-in] Adobe Express/In/Slide In.ffx
+- [built-in] Adobe Express/In/Spin In.ffx
+- [built-in] Adobe Express/In/Tumble In.ffx
+- [built-in] Adobe Express/Looping/Blinking Loop.ffx
+- [built-in] Adobe Express/Looping/Bob Loop.ffx
+- [built-in] Adobe Express/Looping/Breathe Loop.ffx
+- [built-in] Adobe Express/Looping/Flicker Loop.ffx
+- [built-in] Adobe Express/Looping/Jitter Loop.ffx
+- [built-in] Adobe Express/Looping/Pulse Loop.ffx
+- [built-in] Adobe Express/Looping/Spin Loop.ffx
+- [built-in] Adobe Express/Looping/Wiggle Loop.ffx
+- [built-in] Adobe Express/Looping/Yoyo Loop.ffx
+- [built-in] Adobe Express/Out/Bungee Out.ffx
+- [built-in] Adobe Express/Out/Fade Out.ffx
+- [built-in] Adobe Express/Out/Flicker Out.ffx
+- [built-in] Adobe Express/Out/Grow Out.ffx
+- [built-in] Adobe Express/Out/Pop Out.ffx
+- [built-in] Adobe Express/Out/Shrink Out.ffx
+- [built-in] Adobe Express/Out/Slide Out.ffx
+- [built-in] Adobe Express/Out/Spin Out.ffx
+- [built-in] Adobe Express/Out/Tumble Out.ffx
+- [built-in] Backgrounds/Anime Radial.ffx
+- [built-in] Backgrounds/Anime Speed Lines.ffx
+- [built-in] Backgrounds/Apparition.ffx
+- [built-in] Backgrounds/Blocks.ffx
+- [built-in] Backgrounds/Cinders.ffx
+- [built-in] Backgrounds/Circuit.ffx
+- [built-in] Backgrounds/Cosmic Power.ffx
+- [built-in] Backgrounds/Creepy.ffx
+- [built-in] Backgrounds/Curtain.ffx
+- [built-in] Backgrounds/Deep Tissue.ffx
+- [built-in] Backgrounds/Fog Lights.ffx
+- [built-in] Backgrounds/Green Crystals.ffx
+- [built-in] Backgrounds/Indigestion.ffx
+- [built-in] Backgrounds/Infection.ffx
+- [built-in] Backgrounds/Lightning Bend.ffx
+- [built-in] Backgrounds/Magma.ffx
+- [built-in] Backgrounds/Orb.ffx
+- [built-in] Backgrounds/Racing Rectangles.ffx
+- [built-in] Backgrounds/Red Speed.ffx
+- [built-in] Backgrounds/River.ffx
+- [built-in] Backgrounds/Rose Light.ffx
+- [built-in] Backgrounds/Silk.ffx
+- [built-in] Backgrounds/Smoke Rising.ffx
+- [built-in] Backgrounds/Sweeping Curves.ffx
+- [built-in] Behaviors/Autoscroll - horizontal.ffx
+- [built-in] Behaviors/Autoscroll - vertical.ffx
+- [built-in] Behaviors/Blinking Opacity.ffx
+- [built-in] Behaviors/Drift Over Time.ffx
+- [built-in] Behaviors/Fade In Over Layer Below.ffx
+- [built-in] Behaviors/Fade In+Out - frames.ffx
+- [built-in] Behaviors/Fade In+Out - msec.ffx
+- [built-in] Behaviors/Fade Out Over Layer Below.ffx
+- [built-in] Behaviors/Lock Anchor Point.ffx
+- [built-in] Behaviors/Opacity Flash - layer markers.ffx
+- [built-in] Behaviors/Opacity Flash - random.ffx
+- [built-in] Behaviors/Random Colors.ffx
+- [built-in] Behaviors/Random On-Off.ffx
+- [built-in] Behaviors/Random Whole Numbers.ffx
+- [built-in] Behaviors/Rotate Over Time.ffx
+- [built-in] Behaviors/Scale Bounce - layer markers.ffx
+- [built-in] Behaviors/Scale Bounce - random.ffx
+- [built-in] Behaviors/Separate XYZ Scale.ffx
+- [built-in] Behaviors/Trim Paths - at layer in.ffx
+- [built-in] Behaviors/Trim Paths - at layer out.ffx
+- [built-in] Behaviors/Wave Value Generator.ffx
+- [built-in] Behaviors/Wiggle - gelatin.ffx
+- [built-in] Behaviors/Wiggle - position.ffx
+- [built-in] Behaviors/Wiggle - rotation.ffx
+- [built-in] Behaviors/Wiggle - scale.ffx
+- [built-in] Behaviors/Wiggle - shear.ffx
+- [built-in] Behaviors/Wigglerama.ffx
+- [built-in] Image - Creative/Bloom - brights.ffx
+- [built-in] Image - Creative/Bloom - brights+darks.ffx
+- [built-in] Image - Creative/Bloom - crystallize 1.ffx
+- [built-in] Image - Creative/Bloom - crystallize 2.ffx
+- [built-in] Image - Creative/Colorize - blue wash.ffx
+- [built-in] Image - Creative/Colorize - gold dip.ffx
+- [built-in] Image - Creative/Colorize - infrared.ffx
+- [built-in] Image - Creative/Colorize - moonshadows.ffx
+- [built-in] Image - Creative/Colorize - red hand tint.ffx
+- [built-in] Image - Creative/Colorize - royal purple.ffx
+- [built-in] Image - Creative/Colorize - sepia.ffx
+- [built-in] Image - Creative/Colorize - sky blue.ffx
+- [built-in] Image - Creative/Colorize - sky orange.ffx
+- [built-in] Image - Creative/Colorize - sunset gradient.ffx
+- [built-in] Image - Creative/Contrast - luminance.ffx
+- [built-in] Image - Creative/Contrast - saturation.ffx
+- [built-in] Image - Creative/Dimension - bevel+shadow.ffx
+- [built-in] Image - Creative/Dimension - glow+shadow.ffx
+- [built-in] Image - Creative/Grayscale 1.ffx
+- [built-in] Image - Creative/Grayscale 2.ffx
+- [built-in] Image - Creative/Grayscale 3.ffx
+- [built-in] Image - Creative/Grayscale 4.ffx
+- [built-in] Image - Creative/Hand Drawn Effect.ffx
+- [built-in] Image - Creative/Mood Lighting - amorphous.ffx
+- [built-in] Image - Creative/Mood Lighting - digital.ffx
+- [built-in] Image - Creative/Mood Lighting - streaks.ffx
+- [built-in] Image - Creative/Noisy Vignette.ffx
+- [built-in] Image - Creative/Stacked Drop Shadows.ffx
+- [built-in] Image - Creative/VHS Flicker Effect.ffx
+- [built-in] Image - Creative/Vignette Lighting.ffx
+- [built-in] Image - Special Effects/Bad TV 1 - warp.ffx
+- [built-in] Image - Special Effects/Bad TV 2 - old.ffx
+- [built-in] Image - Special Effects/Bad TV 3 - weak.ffx
+- [built-in] Image - Special Effects/Cracked Tiles.ffx
+- [built-in] Image - Special Effects/Light Leaks - layer markers.ffx
+- [built-in] Image - Special Effects/Light Leaks - random.ffx
+- [built-in] Image - Special Effects/Motion Registration Errors.ffx
+- [built-in] Image - Special Effects/Night Vision.ffx
+- [built-in] Image - Utilities/Alpha From Lightness (Unmult).ffx
+- [built-in] Image - Utilities/Compress-Expand Dynamic Range.ffx
+- [built-in] Image - Utilities/Crop Edges.ffx
+- [built-in] Image - Utilities/Flip + Flop.ffx
+- [built-in] Image - Utilities/Flip.ffx
+- [built-in] Image - Utilities/Flop.ffx
+- [built-in] Image - Utilities/Invert Alpha.ffx
+- [built-in] Image - Utilities/Keying - blue blur.ffx
+- [built-in] Image - Utilities/Keying - green blur.ffx
+- [built-in] Image - Utilities/Keylight + Key Cleaner + Advanced Spill Suppressor.ffx
+- [built-in] Image - Utilities/Levels - computer to video.ffx
+- [built-in] Image - Utilities/Levels - Video to Computer.ffx
+- [built-in] Image - Utilities/Magnify & Preserve Alpha.ffx
+- [built-in] Image - Utilities/Sample Image Expression.ffx
+- [built-in] Legacy/3D Lines Zoom In.ffx
+- [built-in] Legacy/3D Rotate around Circle.ffx
+- [built-in] Legacy/Bars Blinky.ffx
+- [built-in] Legacy/Blue Flash.ffx
+- [built-in] Legacy/Boxes - concentric NTSC.ffx
+- [built-in] Legacy/Boxes - concentric PAL.ffx
+- [built-in] Legacy/Boxes - random 1 NTSC.ffx
+- [built-in] Legacy/Boxes - random 1 PAL.ffx
+- [built-in] Legacy/Boxes - random 2 NTSC.ffx
+- [built-in] Legacy/Boxes - random 2 PAL.ffx
+- [built-in] Legacy/Boxes - random 3 NTSC.ffx
+- [built-in] Legacy/Boxes - random 3 PAL.ffx
+- [built-in] Legacy/Boxes - stroked NTSC.ffx
+- [built-in] Legacy/Boxes - stroked PAL.ffx
+- [built-in] Legacy/Centipede.ffx
+- [built-in] Legacy/Contract - Expand.ffx
+- [built-in] Legacy/DialTone-US.ffx
+- [built-in] Legacy/Digital.ffx
+- [built-in] Legacy/Drop Bounce.ffx
+- [built-in] Legacy/Embossed Multiple Exposure.ffx
+- [built-in] Legacy/Emerge.ffx
+- [built-in] Legacy/Ethereal.ffx
+- [built-in] Legacy/Fluctuate.ffx
+- [built-in] Legacy/Fly to Inset.ffx
+- [built-in] Legacy/Frenzy.ffx
+- [built-in] Legacy/Front - Back.ffx
+- [built-in] Legacy/Frontside - Backside.ffx
+- [built-in] Legacy/Green Dots.ffx
+- [built-in] Legacy/Incoming.ffx
+- [built-in] Legacy/Inflammation.ffx
+- [built-in] Legacy/Inset Video - framed.ffx
+- [built-in] Legacy/Inset Video - torn edges.ffx
+- [built-in] Legacy/Left Third - scoop mask NTSC.ffx
+- [built-in] Legacy/Left Third - scoop mask PAL.ffx
+- [built-in] Legacy/Lightning - Horizontal.ffx
+- [built-in] Legacy/Lightning - Vertical.ffx
+- [built-in] Legacy/Lower Third - scoop mask NTSC.ffx
+- [built-in] Legacy/Lower Third - scoop mask PAL.ffx
+- [built-in] Legacy/Lower Third Holdout - darken.ffx
+- [built-in] Legacy/Lower Third Holdout - saturate.ffx
+- [built-in] Legacy/Lyrical.ffx
+- [built-in] Legacy/Multi-Line Flip.ffx
+- [built-in] Legacy/Organism.ffx
+- [built-in] Legacy/Outgoing - Incoming.ffx
+- [built-in] Legacy/Ovals - concentric NTSC.ffx
+- [built-in] Legacy/Ovals - concentric PAL.ffx
+- [built-in] Legacy/Ovals - random 1 NTSC.ffx
+- [built-in] Legacy/Ovals - random 1 PAL.ffx
+- [built-in] Legacy/Ovals - random 2 NTSC.ffx
+- [built-in] Legacy/Ovals - random 2 PAL.ffx
+- [built-in] Legacy/Paper Clip.ffx
+- [built-in] Legacy/Pinwheel.ffx
+- [built-in] Legacy/Pulse Exposure.ffx
+- [built-in] Legacy/Reduce DV blockiness.ffx
+- [built-in] Legacy/Separate XYZ Position.ffx
+- [built-in] Legacy/Shadows.ffx
+- [built-in] Legacy/Silhouettes.ffx
+- [built-in] Legacy/Sonar Ping.ffx
+- [built-in] Legacy/Spin Flash.ffx
+- [built-in] Legacy/Spirograph.ffx
+- [built-in] Legacy/Twisty Ribbons 2.ffx
+- [built-in] Legacy/Twisty Ribbons.ffx
+- [built-in] Legacy/Walk Of Stars.ffx
+- [built-in] Legacy/White Trim.ffx
+- [built-in] Legacy/Word Flash.ffx
+- [built-in] Shapes/Backgrounds/Box Swarm.ffx
+- [built-in] Shapes/Backgrounds/Composition Border.ffx
+- [built-in] Shapes/Backgrounds/Kaleidoscopic.ffx
+- [built-in] Shapes/Backgrounds/Nerve Net - Circular.ffx
+- [built-in] Shapes/Backgrounds/Nerve Net - Penta.ffx
+- [built-in] Shapes/Backgrounds/Sunburst.ffx
+- [built-in] Shapes/Elements/2D Text Box (Shape).ffx
+- [built-in] Shapes/Elements/Analogue Clock.ffx
+- [built-in] Shapes/Elements/Bar Graph.ffx
+- [built-in] Shapes/Elements/Bouncing Map Icons.ffx
+- [built-in] Shapes/Elements/Bounding Box.ffx
+- [built-in] Shapes/Elements/Burst Pop.ffx
+- [built-in] Shapes/Elements/Chasing Line - Boxes.ffx
+- [built-in] Shapes/Elements/Crinkle Cut Sticker.ffx
+- [built-in] Shapes/Elements/DNA Helix.ffx
+- [built-in] Shapes/Elements/Grid of Crosses.ffx
+- [built-in] Shapes/Elements/Line Graph.ffx
+- [built-in] Shapes/Elements/Marquee Chasers.ffx
+- [built-in] Shapes/Elements/Popping Map Pin.ffx
+- [built-in] Shapes/Elements/Postage Stamp.ffx
+- [built-in] Shapes/Elements/Radial Graph.ffx
+- [built-in] Shapes/Elements/Repeating Lines.ffx
+- [built-in] Shapes/Elements/Ring Chart.ffx
+- [built-in] Shapes/Elements/Scalloped Frame.ffx
+- [built-in] Shapes/Elements/Simple Map Marker.ffx
+- [built-in] Shapes/Elements/Switchable Cursor Element.ffx
+- [built-in] Shapes/Elements/Wireframe Worm.ffx
+- [built-in] Shapes/Elements/Write On Arrow.ffx
+- [built-in] Shapes/Sprites - Animated/Alien Face - animated.ffx
+- [built-in] Shapes/Sprites - Animated/Circular - cellular division.ffx
+- [built-in] Shapes/Sprites - Animated/Dancing Knot.ffx
+- [built-in] Shapes/Sprites - Animated/Mandala - animated.ffx
+- [built-in] Shapes/Sprites - Animated/Phase Scope.ffx
+- [built-in] Shapes/Sprites - Animated/SpiroMandala.ffx
+- [built-in] Shapes/Sprites - Animated/TwinkleStar.ffx
+- [built-in] Shapes/Sprites - Animated/Vintage Star.ffx
+- [built-in] Shapes/Sprites - Still/Alien Calligraphy.ffx
+- [built-in] Shapes/Sprites - Still/Alien Face.ffx
+- [built-in] Shapes/Sprites - Still/Box - dashed lines.ffx
+- [built-in] Shapes/Sprites - Still/Bullseye.ffx
+- [built-in] Shapes/Sprites - Still/Circular - half round.ffx
+- [built-in] Shapes/Sprites - Still/Circular - tri dash.ffx
+- [built-in] Shapes/Sprites - Still/Crosshair - brackets.ffx
+- [built-in] Shapes/Sprites - Still/Crosshair - round.ffx
+- [built-in] Shapes/Sprites - Still/Crosshair - square.ffx
+- [built-in] Shapes/Sprites - Still/Fan Blades.ffx
+- [built-in] Shapes/Sprites - Still/Flower Power.ffx
+- [built-in] Shapes/Sprites - Still/Gear 1.ffx
+- [built-in] Shapes/Sprites - Still/Gear 2.ffx
+- [built-in] Shapes/Sprites - Still/Holy Light.ffx
+- [built-in] Shapes/Sprites - Still/Indian Sun.ffx
+- [built-in] Shapes/Sprites - Still/Mandala.ffx
+- [built-in] Shapes/Sprites - Still/RayStar-4.ffx
+- [built-in] Shapes/Sprites - Still/RayStar-8.ffx
+- [built-in] Shapes/Sprites - Still/Rounded Bracket - beveled.ffx
+- [built-in] Shapes/Sprites - Still/Rounded Bracket - double.ffx
+- [built-in] Shapes/Sprites - Still/Seaside Daisy.ffx
+- [built-in] Shapes/Sprites - Still/Tri Cog.ffx
+- [built-in] Sound Effects/Blaster.ffx
+- [built-in] Sound Effects/Busy.ffx
+- [built-in] Sound Effects/CallAdobe.ffx
+- [built-in] Sound Effects/DTMF.ffx
+- [built-in] Sound Effects/PhoneCompany.ffx
+- [built-in] Sound Effects/RingingPhone-US.ffx
+- [built-in] Synthetics/Blue Bars.ffx
+- [built-in] Synthetics/CD Back.ffx
+- [built-in] Synthetics/Cells.ffx
+- [built-in] Synthetics/Chip Foil.ffx
+- [built-in] Synthetics/Gold Ambiance.ffx
+- [built-in] Synthetics/Holographic Foil.ffx
+- [built-in] Synthetics/Mosaic.ffx
+- [built-in] Synthetics/Orange Streaks.ffx
+- [built-in] Synthetics/Smoke - Drifting.ffx
+- [built-in] Synthetics/Starburst Spin.ffx
+- [built-in] Synthetics/Topographic Lines.ffx
+- [built-in] Text/3D Text/3D Basic Position Z Cascade In.ffx
+- [built-in] Text/3D Text/3D Basic Position Z Type In.ffx
+- [built-in] Text/3D Text/3D Basic Rotate X Cascade In.ffx
+- [built-in] Text/3D Text/3D Basic Rotate Y Cascade In.ffx
+- [built-in] Text/3D Text/3D Bouncing In Centered.ffx
+- [built-in] Text/3D Text/3D Fall Back Scale & Skew In.ffx
+- [built-in] Text/3D Text/3D Fall Back Scramble & Blur In.ffx
+- [built-in] Text/3D Text/3D Flip In Rotate X.ffx
+- [built-in] Text/3D Text/3D Flip Out Rotate X.ffx
+- [built-in] Text/3D Text/3D Flip Up Reflection.ffx
+- [built-in] Text/3D Text/3D Flutter In From Left.ffx
+- [built-in] Text/3D Text/3D Flutter In Random Order.ffx
+- [built-in] Text/3D Text/3D Flutter Out From Right.ffx
+- [built-in] Text/3D Text/3D Fly In & Unfold.ffx
+- [built-in] Text/3D Text/3D Fly In From Behind Camera.ffx
+- [built-in] Text/3D Text/3D Fly In Random & Rotate Y.ffx
+- [built-in] Text/3D Text/3D Rain In By Word.ffx
+- [built-in] Text/3D Text/3D Random Spike Tumble In.ffx
+- [built-in] Text/3D Text/3D Random Tumble In By Word.ffx
+- [built-in] Text/3D Text/3D Resolve Position In.ffx
+- [built-in] Text/3D Text/3D Rotate in by Character X.ffx
+- [built-in] Text/3D Text/3D Rotate in by Character.ffx
+- [built-in] Text/3D Text/3D Rotate out by Character X.ffx
+- [built-in] Text/3D Text/3D Rotate out by Word.ffx
+- [built-in] Text/3D Text/3D Scramble in Position Z.ffx
+- [built-in] Text/3D Text/3D Spiral Down & Unfold.ffx
+- [built-in] Text/3D Text/3D Spiral Rotate In by Line.ffx
+- [built-in] Text/3D Text/3D Spiral Rotate Out by Line.ffx
+- [built-in] Text/3D Text/3D Swing In On Path.ffx
+- [built-in] Text/3D Text/3D Twist & color characters.ffx
+- [built-in] Text/Animate In/Alternating Characters In.ffx
+- [built-in] Text/Animate In/Blinking Cursor Typewriter Console.ffx
+- [built-in] Text/Animate In/Center Spiral In.ffx
+- [built-in] Text/Animate In/Characters Shuffle In.ffx
+- [built-in] Text/Animate In/Decode In By Random Character.ffx
+- [built-in] Text/Animate In/Decoder Fade In.ffx
+- [built-in] Text/Animate In/Drop In By Character.ffx
+- [built-in] Text/Animate In/Espresso Eye Chart.ffx
+- [built-in] Text/Animate In/Fade Up And Flip.ffx
+- [built-in] Text/Animate In/Fade Up Characters.ffx
+- [built-in] Text/Animate In/Fade Up Lines.ffx
+- [built-in] Text/Animate In/Fade Up Words.ffx
+- [built-in] Text/Animate In/Fly In From Bottom.ffx
+- [built-in] Text/Animate In/Fly In With A Twist.ffx
+- [built-in] Text/Animate In/Opacity Flicker In.ffx
+- [built-in] Text/Animate In/Pop Buzz Words.ffx
+- [built-in] Text/Animate In/Raining Characters In.ffx
+- [built-in] Text/Animate In/Random Fade In.ffx
+- [built-in] Text/Animate In/Random Shuffle In.ffx
+- [built-in] Text/Animate In/Random Word Shuffle In.ffx
+- [built-in] Text/Animate In/Slide and Pop In.ffx
+- [built-in] Text/Animate In/Slide Down By Character.ffx
+- [built-in] Text/Animate In/Slide In By Line.ffx
+- [built-in] Text/Animate In/Slide In From Comp Edge.ffx
+- [built-in] Text/Animate In/Slide Up By Character.ffx
+- [built-in] Text/Animate In/Slide Up By Word.ffx
+- [built-in] Text/Animate In/Slow Fade On.ffx
+- [built-in] Text/Animate In/Smooth Move In.ffx
+- [built-in] Text/Animate In/Spin In By Character.ffx
+- [built-in] Text/Animate In/Spin In By Word.ffx
+- [built-in] Text/Animate In/Straight In By Character.ffx
+- [built-in] Text/Animate In/Straight In By Word.ffx
+- [built-in] Text/Animate In/Straight In Multi-Line 2.ffx
+- [built-in] Text/Animate In/Straight In Multi-Line.ffx
+- [built-in] Text/Animate In/Stretch In Each Line.ffx
+- [built-in] Text/Animate In/Stretch In Each Word.ffx
+- [built-in] Text/Animate In/Twirl On Each Line.ffx
+- [built-in] Text/Animate In/Twirl On Each Word.ffx
+- [built-in] Text/Animate In/Typewriter.ffx
+- [built-in] Text/Animate In/Wipe In To Center.ffx
+- [built-in] Text/Animate Out/Alternating Characters Out.ffx
+- [built-in] Text/Animate Out/Decode Out By Random Character.ffx
+- [built-in] Text/Animate Out/Encoder Fade Out.ffx
+- [built-in] Text/Animate Out/Fade Out By Character.ffx
+- [built-in] Text/Animate Out/Fade Out Slow.ffx
+- [built-in] Text/Animate Out/Opacity Flicker Out.ffx
+- [built-in] Text/Animate Out/Raining Characters Out.ffx
+- [built-in] Text/Animate Out/Random Fly Off.ffx
+- [built-in] Text/Animate Out/Random Word Fly Off.ffx
+- [built-in] Text/Animate Out/Slide and Pop Out.ffx
+- [built-in] Text/Animate Out/Slide Off Right By Character.ffx
+- [built-in] Text/Animate Out/Slide Off Right By Word.ffx
+- [built-in] Text/Animate Out/Slide Out By Line.ffx
+- [built-in] Text/Animate Out/Slide Out To Comp Edge.ffx
+- [built-in] Text/Animate Out/Stretch Out Each Line.ffx
+- [built-in] Text/Animate Out/Stretch Out Each Word.ffx
+- [built-in] Text/Animate Out/Twirl Off Each Line.ffx
+- [built-in] Text/Animate Out/Twirl Off Each Word.ffx
+- [built-in] Text/Blurs/Blur and Fade In.ffx
+- [built-in] Text/Blurs/Blur and Fade Out.ffx
+- [built-in] Text/Blurs/Blur Glitch.ffx
+- [built-in] Text/Blurs/Blur In By Word.ffx
+- [built-in] Text/Blurs/Bullet Train In.ffx
+- [built-in] Text/Blurs/Evaporate Out.ffx
+- [built-in] Text/Blurs/Foggy In.ffx
+- [built-in] Text/Blurs/Harsh Blur In By Character.ffx
+- [built-in] Text/Blurs/Harsh Blur Out By Character.ffx
+- [built-in] Text/Blurs/Transporter In.ffx
+- [built-in] Text/Curves and Spins/Bloom Flower In.ffx
+- [built-in] Text/Curves and Spins/Clockwise Entry.ffx
+- [built-in] Text/Curves and Spins/Counter Rotate.ffx
+- [built-in] Text/Curves and Spins/Dust Devil Out.ffx
+- [built-in] Text/Curves and Spins/Lasso In.ffx
+- [built-in] Text/Curves and Spins/Lasso Tumble In.ffx
+- [built-in] Text/Curves and Spins/Musical Chairs.ffx
+- [built-in] Text/Curves and Spins/Newton.ffx
+- [built-in] Text/Curves and Spins/Radial Flare In.ffx
+- [built-in] Text/Curves and Spins/Retrograde.ffx
+- [built-in] Text/Curves and Spins/Rotate.ffx
+- [built-in] Text/Curves and Spins/Somersault In.ffx
+- [built-in] Text/Curves and Spins/Spin Fast In.ffx
+- [built-in] Text/Curves and Spins/Spiral In.ffx
+- [built-in] Text/Curves and Spins/Spiral Out.ffx
+- [built-in] Text/Curves and Spins/Swoop In.ffx
+- [built-in] Text/Curves and Spins/Tea Leaves In.ffx
+- [built-in] Text/Curves and Spins/Tire Rim In.ffx
+- [built-in] Text/Curves and Spins/Whirl In.ffx
+- [built-in] Text/Expressions/2D Text Box (Mask & Effects).ffx
+- [built-in] Text/Expressions/Cycle Word List.ffx
+- [built-in] Text/Expressions/Display Comp Time.ffx
+- [built-in] Text/Expressions/Frame Number.ffx
+- [built-in] Text/Expressions/Inch Worm.ffx
+- [built-in] Text/Expressions/Text Bounce.ffx
+- [built-in] Text/Expressions/Word List Highlight.ffx
+- [built-in] Text/Fill and Stroke/Chasing Stroke.ffx
+- [built-in] Text/Fill and Stroke/Chill Hue Shift.ffx
+- [built-in] Text/Fill and Stroke/Color Wash Behavior.ffx
+- [built-in] Text/Fill and Stroke/Cycle Fill Hue.ffx
+- [built-in] Text/Fill and Stroke/Fill Color Wipe.ffx
+- [built-in] Text/Fill and Stroke/Flicker Color.ffx
+- [built-in] Text/Fill and Stroke/Pulse Orange.ffx
+- [built-in] Text/Fill and Stroke/Pulsing Strokes.ffx
+- [built-in] Text/Fill and Stroke/Sliding Color Flicker.ffx
+- [built-in] Text/Fill and Stroke/Stroke Ease Down.ffx
+- [built-in] Text/Fill and Stroke/Wiggly Stroke Width By Line.ffx
+- [built-in] Text/Graphical/Blue Note.ffx
+- [built-in] Text/Graphical/Cut Shapes.ffx
+- [built-in] Text/Graphical/Exchange.ffx
+- [built-in] Text/Graphical/Hazard.ffx
+- [built-in] Text/Graphical/Red Circles.ffx
+- [built-in] Text/Graphical/Scratchy Film.ffx
+- [built-in] Text/Graphical/Snowflakes.ffx
+- [built-in] Text/Graphical/Yellow Boxes.ffx
+- [built-in] Text/Lights and Optical/Broadway.ffx
+- [built-in] Text/Lights and Optical/Bubble Pulse.ffx
+- [built-in] Text/Lights and Optical/Flash.ffx
+- [built-in] Text/Lights and Optical/Flicker Exposure.ffx
+- [built-in] Text/Lights and Optical/Fluorescent Light.ffx
+- [built-in] Text/Lights and Optical/Office Light.ffx
+- [built-in] Text/Lights and Optical/Overlay.ffx
+- [built-in] Text/Mechanical/Algorithm In.ffx
+- [built-in] Text/Mechanical/Algorithm Loop.ffx
+- [built-in] Text/Mechanical/Automation.ffx
+- [built-in] Text/Mechanical/Bad Reception.ffx
+- [built-in] Text/Mechanical/Doppler.ffx
+- [built-in] Text/Mechanical/Electro Magnet In.ffx
+- [built-in] Text/Mechanical/Helicopter In.ffx
+- [built-in] Text/Mechanical/Insert Text In.ffx
+- [built-in] Text/Mechanical/Kinematic In.ffx
+- [built-in] Text/Mechanical/Mechanical In.ffx
+- [built-in] Text/Mechanical/Pistons.ffx
+- [built-in] Text/Mechanical/Rack & Pinion.ffx
+- [built-in] Text/Mechanical/Roadtrip 2.ffx
+- [built-in] Text/Mechanical/Roadtrip.ffx
+- [built-in] Text/Mechanical/Scale Bounce.ffx
+- [built-in] Text/Mechanical/Screen Roll.ffx
+- [built-in] Text/Mechanical/Stairstep.ffx
+- [built-in] Text/Mechanical/Submarine.ffx
+- [built-in] Text/Mechanical/Underscore In.ffx
+- [built-in] Text/Mechanical/Warp 9.8.ffx
+- [built-in] Text/Miscellaneous/Angle Fly-In.ffx
+- [built-in] Text/Miscellaneous/Back Flip.ffx
+- [built-in] Text/Miscellaneous/Blow Away Out.ffx
+- [built-in] Text/Miscellaneous/Bounce In.ffx
+- [built-in] Text/Miscellaneous/Bungee.ffx
+- [built-in] Text/Miscellaneous/Chaotic In.ffx
+- [built-in] Text/Miscellaneous/Clay Pigeons Out.ffx
+- [built-in] Text/Miscellaneous/Explode Out.ffx
+- [built-in] Text/Miscellaneous/Glitchy Text Decoder.ffx
+- [built-in] Text/Miscellaneous/Hop Skip And A Jump.ffx
+- [built-in] Text/Miscellaneous/Pendulum In.ffx
+- [built-in] Text/Miscellaneous/Question.ffx
+- [built-in] Text/Miscellaneous/Rattle.ffx
+- [built-in] Text/Miscellaneous/Roll Bounce In.ffx
+- [built-in] Text/Miscellaneous/Sequential Jump.ffx
+- [built-in] Text/Miscellaneous/Six-Shooter in.ffx
+- [built-in] Text/Miscellaneous/Slide Bounce In.ffx
+- [built-in] Text/Miscellaneous/Slip In.ffx
+- [built-in] Text/Miscellaneous/Smokey.ffx
+- [built-in] Text/Miscellaneous/Squeeze.ffx
+- [built-in] Text/Miscellaneous/Superhero In.ffx
+- [built-in] Text/Miscellaneous/Vanishing Point In.ffx
+- [built-in] Text/Miscellaneous/Wiggly Lines In.ffx
+- [built-in] Text/Miscellaneous/Yo-Yo.ffx
+- [built-in] Text/Multi-Line/Alphabet Soup.ffx
+- [built-in] Text/Multi-Line/Alternating Stack In.ffx
+- [built-in] Text/Multi-Line/Currents In.ffx
+- [built-in] Text/Multi-Line/Data Packet.ffx
+- [built-in] Text/Multi-Line/Data Stream In.ffx
+- [built-in] Text/Multi-Line/Deal In.ffx
+- [built-in] Text/Multi-Line/Encryption In.ffx
+- [built-in] Text/Multi-Line/Fly In By Characters.ffx
+- [built-in] Text/Multi-Line/Fly In By Words.ffx
+- [built-in] Text/Multi-Line/Ideas.ffx
+- [built-in] Text/Multi-Line/Jetstream In.ffx
+- [built-in] Text/Multi-Line/Pneumatic In.ffx
+- [built-in] Text/Multi-Line/Word Processor In.ffx
+- [built-in] Text/Multi-Line/Zippy In.ffx
+- [built-in] Text/Number Counters/Counter Countdown Monospaced.ffx
+- [built-in] Text/Number Counters/Currency Counter Monospaced.ffx
+- [built-in] Text/Number Counters/Percentage Counter Monospaced.ffx
+- [built-in] Text/Number Counters/Timer Countdown Monospaced.ffx
+- [built-in] Text/Organic/Autumn.ffx
+- [built-in] Text/Organic/Boiling.ffx
+- [built-in] Text/Organic/Boomerang In.ffx
+- [built-in] Text/Organic/Chewing Gum In.ffx
+- [built-in] Text/Organic/Climb In.ffx
+- [built-in] Text/Organic/Diagonal Bounce In.ffx
+- [built-in] Text/Organic/Dip-Bounce.ffx
+- [built-in] Text/Organic/Double-Helix.ffx
+- [built-in] Text/Organic/Fish Bait.ffx
+- [built-in] Text/Organic/Flying Formation.ffx
+- [built-in] Text/Organic/Horsefly In.ffx
+- [built-in] Text/Organic/Hummingbird In.ffx
+- [built-in] Text/Organic/Insect Wipe.ffx
+- [built-in] Text/Organic/Insects In.ffx
+- [built-in] Text/Organic/Labrador In.ffx
+- [built-in] Text/Organic/Leapfrog.ffx
+- [built-in] Text/Organic/Loose Line.ffx
+- [built-in] Text/Organic/Ocean Tide.ffx
+- [built-in] Text/Organic/Quiver.ffx
+- [built-in] Text/Organic/Ripple In.ffx
+- [built-in] Text/Organic/Rubber Floor.ffx
+- [built-in] Text/Organic/Rubber.ffx
+- [built-in] Text/Organic/Sea-Sick.ffx
+- [built-in] Text/Organic/Shuffle.ffx
+- [built-in] Text/Organic/Simmer.ffx
+- [built-in] Text/Organic/Slice and Dice In.ffx
+- [built-in] Text/Organic/Sprouts In.ffx
+- [built-in] Text/Organic/Tag Team.ffx
+- [built-in] Text/Organic/Wheatfield.ffx
+- [built-in] Text/Organic/Wind Current.ffx
+- [built-in] Text/Organic/Wobble In.ffx
+- [built-in] Text/Paths/360 Loop.ffx
+- [built-in] Text/Paths/Antelope.ffx
+- [built-in] Text/Paths/Ants.ffx
+- [built-in] Text/Paths/Balance.ffx
+- [built-in] Text/Paths/Balloon.ffx
+- [built-in] Text/Paths/Bouncing.ffx
+- [built-in] Text/Paths/Bubble Pop Out.ffx
+- [built-in] Text/Paths/Bump And Slide On.ffx
+- [built-in] Text/Paths/Circuit Board Out.ffx
+- [built-in] Text/Paths/Conveyor Belt.ffx
+- [built-in] Text/Paths/Double Spiral.ffx
+- [built-in] Text/Paths/Down And Out.ffx
+- [built-in] Text/Paths/Downhill Slide Off.ffx
+- [built-in] Text/Paths/Hurdles.ffx
+- [built-in] Text/Paths/Karate Chop.ffx
+- [built-in] Text/Paths/Long Spiral Out.ffx
+- [built-in] Text/Paths/Loop In and Out.ffx
+- [built-in] Text/Paths/Pipes.ffx
+- [built-in] Text/Paths/Rat Nest.ffx
+- [built-in] Text/Paths/Reel To Reel.ffx
+- [built-in] Text/Paths/Reel-To-Reel 2.ffx
+- [built-in] Text/Paths/Rope Bridge.ffx
+- [built-in] Text/Paths/Serpent.ffx
+- [built-in] Text/Paths/Springy.ffx
+- [built-in] Text/Paths/Symmetry.ffx
+- [built-in] Text/Paths/Tchotchke.ffx
+- [built-in] Text/Paths/Zig-Zag.ffx
+- [built-in] Text/Rotation/Drip Down.ffx
+- [built-in] Text/Rotation/Flip Up.ffx
+- [built-in] Text/Rotation/Full Rotation.ffx
+- [built-in] Text/Rotation/Loopy Loop.ffx
+- [built-in] Text/Rotation/Random Rotation.ffx
+- [built-in] Text/Rotation/Rotate Per Character.ffx
+- [built-in] Text/Rotation/Rotate Per Word.ffx
+- [built-in] Text/Rotation/Spin In.ffx
+- [built-in] Text/Rotation/Swirly Rotation.ffx
+- [built-in] Text/Rotation/Whirlwind.ffx
+- [built-in] Text/Scale/Lets Dance.ffx
+- [built-in] Text/Scale/Random Scale In.ffx
+- [built-in] Text/Scale/Scale In By Word.ffx
+- [built-in] Text/Scale/Scale In From Point.ffx
+- [built-in] Text/Scale/Scale In.ffx
+- [built-in] Text/Scale/Scale Out By Word.ffx
+- [built-in] Text/Scale/Scale Out From Point.ffx
+- [built-in] Text/Scale/Scale Out.ffx
+- [built-in] Text/Scale/Wiggly Scale Wipe.ffx
+- [built-in] Text/Scale/Zoom Away.ffx
+- [built-in] Text/Scale/Zoom Forward.ffx
+- [built-in] Text/Tracking/Contract.ffx
+- [built-in] Text/Tracking/Decrease Tracking.ffx
+- [built-in] Text/Tracking/Extend.ffx
+- [built-in] Text/Tracking/Increase Tracking.ffx
+- [built-in] Text/Tracking/Magnify.ffx
+- [built-in] Text/Tracking/Shift In By Tracking.ffx
+- [built-in] Text/Tracking/Shift Out By Tracking.ffx
+- [built-in] Text/Tracking/Spasm.ffx
+- [built-in] Text/Tracking/Stretchy.ffx
+- [built-in] Transitions - Dissolves/Block Dissolve - digital.ffx
+- [built-in] Transitions - Dissolves/Block Dissolve - random.ffx
+- [built-in] Transitions - Dissolves/Block Dissolve - scanlines.ffx
+- [built-in] Transitions - Dissolves/Dissolve - blobs.ffx
+- [built-in] Transitions - Dissolves/Dissolve - dither.ffx
+- [built-in] Transitions - Dissolves/Dissolve - ripple.ffx
+- [built-in] Transitions - Dissolves/Dissolve - sand.ffx
+- [built-in] Transitions - Dissolves/Dissolve - unmelt.ffx
+- [built-in] Transitions - Dissolves/Dissolve - vapor.ffx
+- [built-in] Transitions - Dissolves/Fade - dip to black.ffx
+- [built-in] Transitions - Dissolves/Fade - flash to white.ffx
+- [built-in] Transitions - Dissolves/Fade - overexposed.ffx
+- [built-in] Transitions - Dissolves/Flickering Opacity - at layer in.ffx
+- [built-in] Transitions - Dissolves/Flickering Opacity - at layer out.ffx
+- [built-in] Transitions - Dissolves/Inky Dissolve.ffx
+- [built-in] Transitions - Dissolves/Pixelated Dissolve.ffx
+- [built-in] Transitions - Movement/Card Wipe - 2D fractured.ffx
+- [built-in] Transitions - Movement/Card Wipe - 3D pixelstorm.ffx
+- [built-in] Transitions - Movement/Card Wipe - 3D swing.ffx
+- [built-in] Transitions - Movement/Pop and Wobble In.ffx
+- [built-in] Transitions - Movement/Scale - Cardinal.ffx
+- [built-in] Transitions - Movement/Slide - drop.ffx
+- [built-in] Transitions - Movement/Slide - straight.ffx
+- [built-in] Transitions - Movement/Slide - swoop.ffx
+- [built-in] Transitions - Movement/Stretch - Edge.ffx
+- [built-in] Transitions - Movement/Stretch & Blur.ffx
+- [built-in] Transitions - Movement/Stretch & Slide.ffx
+- [built-in] Transitions - Movement/Stretch Over - horizontal.ffx
+- [built-in] Transitions - Movement/Stretch Over - vertical.ffx
+- [built-in] Transitions - Movement/Zoom - 2D spin.ffx
+- [built-in] Transitions - Movement/Zoom - 3D tumble.ffx
+- [built-in] Transitions - Movement/Zoom - bubble.ffx
+- [built-in] Transitions - Movement/Zoom - spiral.ffx
+- [built-in] Transitions - Movement/Zoom - wobbling.ffx
+- [built-in] Transitions - Wipes/Band Wipe - Build HD.ffx
+- [built-in] Transitions - Wipes/Band Wipe - crossing HD.ffx
+- [built-in] Transitions - Wipes/Band Wipe - Zig Zag HD.ffx
+- [built-in] Transitions - Wipes/Barn Doors.ffx
+- [built-in] Transitions - Wipes/Checker Wipe HD.ffx
+- [built-in] Transitions - Wipes/Clam Shell.ffx
+- [built-in] Transitions - Wipes/Clock Wipe.ffx
+- [built-in] Transitions - Wipes/Corner Reveal.ffx
+- [built-in] Transitions - Wipes/Grid Wipe.ffx
+- [built-in] Transitions - Wipes/Inky Iris Wipe.ffx
+- [built-in] Transitions - Wipes/Inky Linear Wipe.ffx
+- [built-in] Transitions - Wipes/Linear Wipe.ffx
+- [built-in] Transitions - Wipes/Paint On.ffx
+- [built-in] Transitions - Wipes/Pixelated Iris Wipe.ffx
+- [built-in] Transitions - Wipes/Pixelated Linear Wipe.ffx
+- [built-in] Transitions - Wipes/Radial Wipe - Cardinal.ffx
+- [built-in] Transitions - Wipes/Venetian Blinds.ffx
+- [user] (Adobe)/Adobe Express/In/Bungee In.ffx
+- [user] (Adobe)/Adobe Express/In/Fade In.ffx
+- [user] (Adobe)/Adobe Express/In/Flicker In.ffx
+- [user] (Adobe)/Adobe Express/In/Grow In.ffx
+- [user] (Adobe)/Adobe Express/In/Pop In.ffx
+- [user] (Adobe)/Adobe Express/In/Shrink In.ffx
+- [user] (Adobe)/Adobe Express/In/Slide In.ffx
+- [user] (Adobe)/Adobe Express/In/Spin In.ffx
+- [user] (Adobe)/Adobe Express/In/Tumble In.ffx
+- [user] (Adobe)/Adobe Express/Looping/Blinking Loop.ffx
+- [user] (Adobe)/Adobe Express/Looping/Bob Loop.ffx
+- [user] (Adobe)/Adobe Express/Looping/Breathe Loop.ffx
+- [user] (Adobe)/Adobe Express/Looping/Flicker Loop.ffx
+- [user] (Adobe)/Adobe Express/Looping/Jitter Loop.ffx
+- [user] (Adobe)/Adobe Express/Looping/Pulse Loop.ffx
+- [user] (Adobe)/Adobe Express/Looping/Spin Loop.ffx
+- [user] (Adobe)/Adobe Express/Looping/Wiggle Loop.ffx
+- [user] (Adobe)/Adobe Express/Looping/Yoyo Loop.ffx
+- [user] (Adobe)/Adobe Express/Out/Bungee Out.ffx
+- [user] (Adobe)/Adobe Express/Out/Fade Out.ffx
+- [user] (Adobe)/Adobe Express/Out/Flicker Out.ffx
+- [user] (Adobe)/Adobe Express/Out/Grow Out.ffx
+- [user] (Adobe)/Adobe Express/Out/Pop Out.ffx
+- [user] (Adobe)/Adobe Express/Out/Shrink Out.ffx
+- [user] (Adobe)/Adobe Express/Out/Slide Out.ffx
+- [user] (Adobe)/Adobe Express/Out/Spin Out.ffx
+- [user] (Adobe)/Adobe Express/Out/Tumble Out.ffx
+- [user] (Adobe)/Backgrounds/Anime Radial.ffx
+- [user] (Adobe)/Backgrounds/Anime Speed Lines.ffx
+- [user] (Adobe)/Backgrounds/Apparition.ffx
+- [user] (Adobe)/Backgrounds/Blocks.ffx
+- [user] (Adobe)/Backgrounds/Cinders.ffx
+- [user] (Adobe)/Backgrounds/Circuit.ffx
+- [user] (Adobe)/Backgrounds/Cosmic Power.ffx
+- [user] (Adobe)/Backgrounds/Creepy.ffx
+- [user] (Adobe)/Backgrounds/Curtain.ffx
+- [user] (Adobe)/Backgrounds/Deep Tissue.ffx
+- [user] (Adobe)/Backgrounds/Fog Lights.ffx
+- [user] (Adobe)/Backgrounds/Green Crystals.ffx
+- [user] (Adobe)/Backgrounds/Indigestion.ffx
+- [user] (Adobe)/Backgrounds/Infection.ffx
+- [user] (Adobe)/Backgrounds/Lightning Bend.ffx
+- [user] (Adobe)/Backgrounds/Magma.ffx
+- [user] (Adobe)/Backgrounds/Orb.ffx
+- [user] (Adobe)/Backgrounds/Racing Rectangles.ffx
+- [user] (Adobe)/Backgrounds/Red Speed.ffx
+- [user] (Adobe)/Backgrounds/River.ffx
+- [user] (Adobe)/Backgrounds/Rose Light.ffx
+- [user] (Adobe)/Backgrounds/Silk.ffx
+- [user] (Adobe)/Backgrounds/Smoke Rising.ffx
+- [user] (Adobe)/Backgrounds/Sweeping Curves.ffx
+- [user] (Adobe)/Behaviors/Autoscroll - horizontal.ffx
+- [user] (Adobe)/Behaviors/Autoscroll - vertical.ffx
+- [user] (Adobe)/Behaviors/Blinking Opacity.ffx
+- [user] (Adobe)/Behaviors/Drift Over Time.ffx
+- [user] (Adobe)/Behaviors/Fade In Over Layer Below.ffx
+- [user] (Adobe)/Behaviors/Fade In+Out - frames.ffx
+- [user] (Adobe)/Behaviors/Fade In+Out - msec.ffx
+- [user] (Adobe)/Behaviors/Fade Out Over Layer Below.ffx
+- [user] (Adobe)/Behaviors/Lock Anchor Point.ffx
+- [user] (Adobe)/Behaviors/Opacity Flash - layer markers.ffx
+- [user] (Adobe)/Behaviors/Opacity Flash - random.ffx
+- [user] (Adobe)/Behaviors/Random Colors.ffx
+- [user] (Adobe)/Behaviors/Random On-Off.ffx
+- [user] (Adobe)/Behaviors/Random Whole Numbers.ffx
+- [user] (Adobe)/Behaviors/Rotate Over Time.ffx
+- [user] (Adobe)/Behaviors/Scale Bounce - layer markers.ffx
+- [user] (Adobe)/Behaviors/Scale Bounce - random.ffx
+- [user] (Adobe)/Behaviors/Separate XYZ Scale.ffx
+- [user] (Adobe)/Behaviors/Trim Paths - at layer in.ffx
+- [user] (Adobe)/Behaviors/Trim Paths - at layer out.ffx
+- [user] (Adobe)/Behaviors/Wave Value Generator.ffx
+- [user] (Adobe)/Behaviors/Wiggle - gelatin.ffx
+- [user] (Adobe)/Behaviors/Wiggle - position.ffx
+- [user] (Adobe)/Behaviors/Wiggle - rotation.ffx
+- [user] (Adobe)/Behaviors/Wiggle - scale.ffx
+- [user] (Adobe)/Behaviors/Wiggle - shear.ffx
+- [user] (Adobe)/Behaviors/Wigglerama.ffx
+- [user] (Adobe)/Image - Creative/Bloom - brights.ffx
+- [user] (Adobe)/Image - Creative/Bloom - brights+darks.ffx
+- [user] (Adobe)/Image - Creative/Bloom - crystallize 1.ffx
+- [user] (Adobe)/Image - Creative/Bloom - crystallize 2.ffx
+- [user] (Adobe)/Image - Creative/Colorize - blue wash.ffx
+- [user] (Adobe)/Image - Creative/Colorize - gold dip.ffx
+- [user] (Adobe)/Image - Creative/Colorize - infrared.ffx
+- [user] (Adobe)/Image - Creative/Colorize - moonshadows.ffx
+- [user] (Adobe)/Image - Creative/Colorize - red hand tint.ffx
+- [user] (Adobe)/Image - Creative/Colorize - royal purple.ffx
+- [user] (Adobe)/Image - Creative/Colorize - sepia.ffx
+- [user] (Adobe)/Image - Creative/Colorize - sky blue.ffx
+- [user] (Adobe)/Image - Creative/Colorize - sky orange.ffx
+- [user] (Adobe)/Image - Creative/Colorize - sunset gradient.ffx
+- [user] (Adobe)/Image - Creative/Contrast - luminance.ffx
+- [user] (Adobe)/Image - Creative/Contrast - saturation.ffx
+- [user] (Adobe)/Image - Creative/Dimension - bevel+shadow.ffx
+- [user] (Adobe)/Image - Creative/Dimension - glow+shadow.ffx
+- [user] (Adobe)/Image - Creative/Grayscale 1.ffx
+- [user] (Adobe)/Image - Creative/Grayscale 2.ffx
+- [user] (Adobe)/Image - Creative/Grayscale 3.ffx
+- [user] (Adobe)/Image - Creative/Grayscale 4.ffx
+- [user] (Adobe)/Image - Creative/Hand Drawn Effect.ffx
+- [user] (Adobe)/Image - Creative/Mood Lighting - amorphous.ffx
+- [user] (Adobe)/Image - Creative/Mood Lighting - digital.ffx
+- [user] (Adobe)/Image - Creative/Mood Lighting - streaks.ffx
+- [user] (Adobe)/Image - Creative/Noisy Vignette.ffx
+- [user] (Adobe)/Image - Creative/Stacked Drop Shadows.ffx
+- [user] (Adobe)/Image - Creative/VHS Flicker Effect.ffx
+- [user] (Adobe)/Image - Creative/Vignette Lighting.ffx
+- [user] (Adobe)/Image - Special Effects/Bad TV 1 - warp.ffx
+- [user] (Adobe)/Image - Special Effects/Bad TV 2 - old.ffx
+- [user] (Adobe)/Image - Special Effects/Bad TV 3 - weak.ffx
+- [user] (Adobe)/Image - Special Effects/Cracked Tiles.ffx
+- [user] (Adobe)/Image - Special Effects/Light Leaks - layer markers.ffx
+- [user] (Adobe)/Image - Special Effects/Light Leaks - random.ffx
+- [user] (Adobe)/Image - Special Effects/Motion Registration Errors.ffx
+- [user] (Adobe)/Image - Special Effects/Night Vision.ffx
+- [user] (Adobe)/Image - Utilities/Alpha From Lightness (Unmult).ffx
+- [user] (Adobe)/Image - Utilities/Compress-Expand Dynamic Range.ffx
+- [user] (Adobe)/Image - Utilities/Crop Edges.ffx
+- [user] (Adobe)/Image - Utilities/Flip + Flop.ffx
+- [user] (Adobe)/Image - Utilities/Flip.ffx
+- [user] (Adobe)/Image - Utilities/Flop.ffx
+- [user] (Adobe)/Image - Utilities/Invert Alpha.ffx
+- [user] (Adobe)/Image - Utilities/Keying - blue blur.ffx
+- [user] (Adobe)/Image - Utilities/Keying - green blur.ffx
+- [user] (Adobe)/Image - Utilities/Keylight + Key Cleaner + Advanced Spill Suppressor.ffx
+- [user] (Adobe)/Image - Utilities/Levels - computer to video.ffx
+- [user] (Adobe)/Image - Utilities/Levels - Video to Computer.ffx
+- [user] (Adobe)/Image - Utilities/Magnify & Preserve Alpha.ffx
+- [user] (Adobe)/Image - Utilities/Sample Image Expression.ffx
+- [user] (Adobe)/Legacy/3D Lines Zoom In.ffx
+- [user] (Adobe)/Legacy/3D Rotate around Circle.ffx
+- [user] (Adobe)/Legacy/Bars Blinky.ffx
+- [user] (Adobe)/Legacy/Blue Flash.ffx
+- [user] (Adobe)/Legacy/Boxes - concentric NTSC.ffx
+- [user] (Adobe)/Legacy/Boxes - concentric PAL.ffx
+- [user] (Adobe)/Legacy/Boxes - random 1 NTSC.ffx
+- [user] (Adobe)/Legacy/Boxes - random 1 PAL.ffx
+- [user] (Adobe)/Legacy/Boxes - random 2 NTSC.ffx
+- [user] (Adobe)/Legacy/Boxes - random 2 PAL.ffx
+- [user] (Adobe)/Legacy/Boxes - random 3 NTSC.ffx
+- [user] (Adobe)/Legacy/Boxes - random 3 PAL.ffx
+- [user] (Adobe)/Legacy/Boxes - stroked NTSC.ffx
+- [user] (Adobe)/Legacy/Boxes - stroked PAL.ffx
+- [user] (Adobe)/Legacy/Centipede.ffx
+- [user] (Adobe)/Legacy/Contract - Expand.ffx
+- [user] (Adobe)/Legacy/DialTone-US.ffx
+- [user] (Adobe)/Legacy/Digital.ffx
+- [user] (Adobe)/Legacy/Drop Bounce.ffx
+- [user] (Adobe)/Legacy/Embossed Multiple Exposure.ffx
+- [user] (Adobe)/Legacy/Emerge.ffx
+- [user] (Adobe)/Legacy/Ethereal.ffx
+- [user] (Adobe)/Legacy/Fluctuate.ffx
+- [user] (Adobe)/Legacy/Fly to Inset.ffx
+- [user] (Adobe)/Legacy/Frenzy.ffx
+- [user] (Adobe)/Legacy/Front - Back.ffx
+- [user] (Adobe)/Legacy/Frontside - Backside.ffx
+- [user] (Adobe)/Legacy/Green Dots.ffx
+- [user] (Adobe)/Legacy/Incoming.ffx
+- [user] (Adobe)/Legacy/Inflammation.ffx
+- [user] (Adobe)/Legacy/Inset Video - framed.ffx
+- [user] (Adobe)/Legacy/Inset Video - torn edges.ffx
+- [user] (Adobe)/Legacy/Left Third - scoop mask NTSC.ffx
+- [user] (Adobe)/Legacy/Left Third - scoop mask PAL.ffx
+- [user] (Adobe)/Legacy/Lightning - Horizontal.ffx
+- [user] (Adobe)/Legacy/Lightning - Vertical.ffx
+- [user] (Adobe)/Legacy/Lower Third - scoop mask NTSC.ffx
+- [user] (Adobe)/Legacy/Lower Third - scoop mask PAL.ffx
+- [user] (Adobe)/Legacy/Lower Third Holdout - darken.ffx
+- [user] (Adobe)/Legacy/Lower Third Holdout - saturate.ffx
+- [user] (Adobe)/Legacy/Lyrical.ffx
+- [user] (Adobe)/Legacy/Multi-Line Flip.ffx
+- [user] (Adobe)/Legacy/Organism.ffx
+- [user] (Adobe)/Legacy/Outgoing - Incoming.ffx
+- [user] (Adobe)/Legacy/Ovals - concentric NTSC.ffx
+- [user] (Adobe)/Legacy/Ovals - concentric PAL.ffx
+- [user] (Adobe)/Legacy/Ovals - random 1 NTSC.ffx
+- [user] (Adobe)/Legacy/Ovals - random 1 PAL.ffx
+- [user] (Adobe)/Legacy/Ovals - random 2 NTSC.ffx
+- [user] (Adobe)/Legacy/Ovals - random 2 PAL.ffx
+- [user] (Adobe)/Legacy/Paper Clip.ffx
+- [user] (Adobe)/Legacy/Pinwheel.ffx
+- [user] (Adobe)/Legacy/Pulse Exposure.ffx
+- [user] (Adobe)/Legacy/Reduce DV blockiness.ffx
+- [user] (Adobe)/Legacy/Separate XYZ Position.ffx
+- [user] (Adobe)/Legacy/Shadows.ffx
+- [user] (Adobe)/Legacy/Silhouettes.ffx
+- [user] (Adobe)/Legacy/Sonar Ping.ffx
+- [user] (Adobe)/Legacy/Spin Flash.ffx
+- [user] (Adobe)/Legacy/Spirograph.ffx
+- [user] (Adobe)/Legacy/Twisty Ribbons 2.ffx
+- [user] (Adobe)/Legacy/Twisty Ribbons.ffx
+- [user] (Adobe)/Legacy/Walk Of Stars.ffx
+- [user] (Adobe)/Legacy/White Trim.ffx
+- [user] (Adobe)/Legacy/Word Flash.ffx
+- [user] (Adobe)/Shapes/Backgrounds/Box Swarm.ffx
+- [user] (Adobe)/Shapes/Backgrounds/Composition Border.ffx
+- [user] (Adobe)/Shapes/Backgrounds/Kaleidoscopic.ffx
+- [user] (Adobe)/Shapes/Backgrounds/Nerve Net - Circular.ffx
+- [user] (Adobe)/Shapes/Backgrounds/Nerve Net - Penta.ffx
+- [user] (Adobe)/Shapes/Backgrounds/Sunburst.ffx
+- [user] (Adobe)/Shapes/Elements/2D Text Box (Shape).ffx
+- [user] (Adobe)/Shapes/Elements/Analogue Clock.ffx
+- [user] (Adobe)/Shapes/Elements/Bar Graph.ffx
+- [user] (Adobe)/Shapes/Elements/Bouncing Map Icons.ffx
+- [user] (Adobe)/Shapes/Elements/Bounding Box.ffx
+- [user] (Adobe)/Shapes/Elements/Burst Pop.ffx
+- [user] (Adobe)/Shapes/Elements/Chasing Line - Boxes.ffx
+- [user] (Adobe)/Shapes/Elements/Crinkle Cut Sticker.ffx
+- [user] (Adobe)/Shapes/Elements/DNA Helix.ffx
+- [user] (Adobe)/Shapes/Elements/Grid of Crosses.ffx
+- [user] (Adobe)/Shapes/Elements/Line Graph.ffx
+- [user] (Adobe)/Shapes/Elements/Marquee Chasers.ffx
+- [user] (Adobe)/Shapes/Elements/Popping Map Pin.ffx
+- [user] (Adobe)/Shapes/Elements/Postage Stamp.ffx
+- [user] (Adobe)/Shapes/Elements/Radial Graph.ffx
+- [user] (Adobe)/Shapes/Elements/Repeating Lines.ffx
+- [user] (Adobe)/Shapes/Elements/Ring Chart.ffx
+- [user] (Adobe)/Shapes/Elements/Scalloped Frame.ffx
+- [user] (Adobe)/Shapes/Elements/Simple Map Marker.ffx
+- [user] (Adobe)/Shapes/Elements/Switchable Cursor Element.ffx
+- [user] (Adobe)/Shapes/Elements/Wireframe Worm.ffx
+- [user] (Adobe)/Shapes/Elements/Write On Arrow.ffx
+- [user] (Adobe)/Shapes/Sprites - Animated/Alien Face - animated.ffx
+- [user] (Adobe)/Shapes/Sprites - Animated/Circular - cellular division.ffx
+- [user] (Adobe)/Shapes/Sprites - Animated/Dancing Knot.ffx
+- [user] (Adobe)/Shapes/Sprites - Animated/Mandala - animated.ffx
+- [user] (Adobe)/Shapes/Sprites - Animated/Phase Scope.ffx
+- [user] (Adobe)/Shapes/Sprites - Animated/SpiroMandala.ffx
+- [user] (Adobe)/Shapes/Sprites - Animated/TwinkleStar.ffx
+- [user] (Adobe)/Shapes/Sprites - Animated/Vintage Star.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Alien Calligraphy.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Alien Face.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Box - dashed lines.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Bullseye.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Circular - half round.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Circular - tri dash.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Crosshair - brackets.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Crosshair - round.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Crosshair - square.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Fan Blades.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Flower Power.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Gear 1.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Gear 2.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Holy Light.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Indian Sun.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Mandala.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/RayStar-4.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/RayStar-8.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Rounded Bracket - beveled.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Rounded Bracket - double.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Seaside Daisy.ffx
+- [user] (Adobe)/Shapes/Sprites - Still/Tri Cog.ffx
+- [user] (Adobe)/Sound Effects/Blaster.ffx
+- [user] (Adobe)/Sound Effects/Busy.ffx
+- [user] (Adobe)/Sound Effects/CallAdobe.ffx
+- [user] (Adobe)/Sound Effects/DTMF.ffx
+- [user] (Adobe)/Sound Effects/PhoneCompany.ffx
+- [user] (Adobe)/Sound Effects/RingingPhone-US.ffx
+- [user] (Adobe)/Synthetics/Blue Bars.ffx
+- [user] (Adobe)/Synthetics/CD Back.ffx
+- [user] (Adobe)/Synthetics/Cells.ffx
+- [user] (Adobe)/Synthetics/Chip Foil.ffx
+- [user] (Adobe)/Synthetics/Gold Ambiance.ffx
+- [user] (Adobe)/Synthetics/Holographic Foil.ffx
+- [user] (Adobe)/Synthetics/Mosaic.ffx
+- [user] (Adobe)/Synthetics/Orange Streaks.ffx
+- [user] (Adobe)/Synthetics/Smoke - Drifting.ffx
+- [user] (Adobe)/Synthetics/Starburst Spin.ffx
+- [user] (Adobe)/Synthetics/Topographic Lines.ffx
+- [user] (Adobe)/Text/3D Text/3D Basic Position Z Cascade In.ffx
+- [user] (Adobe)/Text/3D Text/3D Basic Position Z Type In.ffx
+- [user] (Adobe)/Text/3D Text/3D Basic Rotate X Cascade In.ffx
+- [user] (Adobe)/Text/3D Text/3D Basic Rotate Y Cascade In.ffx
+- [user] (Adobe)/Text/3D Text/3D Bouncing In Centered.ffx
+- [user] (Adobe)/Text/3D Text/3D Fall Back Scale & Skew In.ffx
+- [user] (Adobe)/Text/3D Text/3D Fall Back Scramble & Blur In.ffx
+- [user] (Adobe)/Text/3D Text/3D Flip In Rotate X.ffx
+- [user] (Adobe)/Text/3D Text/3D Flip Out Rotate X.ffx
+- [user] (Adobe)/Text/3D Text/3D Flip Up Reflection.ffx
+- [user] (Adobe)/Text/3D Text/3D Flutter In From Left.ffx
+- [user] (Adobe)/Text/3D Text/3D Flutter In Random Order.ffx
+- [user] (Adobe)/Text/3D Text/3D Flutter Out From Right.ffx
+- [user] (Adobe)/Text/3D Text/3D Fly In & Unfold.ffx
+- [user] (Adobe)/Text/3D Text/3D Fly In From Behind Camera.ffx
+- [user] (Adobe)/Text/3D Text/3D Fly In Random & Rotate Y.ffx
+- [user] (Adobe)/Text/3D Text/3D Rain In By Word.ffx
+- [user] (Adobe)/Text/3D Text/3D Random Spike Tumble In.ffx
+- [user] (Adobe)/Text/3D Text/3D Random Tumble In By Word.ffx
+- [user] (Adobe)/Text/3D Text/3D Resolve Position In.ffx
+- [user] (Adobe)/Text/3D Text/3D Rotate in by Character X.ffx
+- [user] (Adobe)/Text/3D Text/3D Rotate in by Character.ffx
+- [user] (Adobe)/Text/3D Text/3D Rotate out by Character X.ffx
+- [user] (Adobe)/Text/3D Text/3D Rotate out by Word.ffx
+- [user] (Adobe)/Text/3D Text/3D Scramble in Position Z.ffx
+- [user] (Adobe)/Text/3D Text/3D Spiral Down & Unfold.ffx
+- [user] (Adobe)/Text/3D Text/3D Spiral Rotate In by Line.ffx
+- [user] (Adobe)/Text/3D Text/3D Spiral Rotate Out by Line.ffx
+- [user] (Adobe)/Text/3D Text/3D Swing In On Path.ffx
+- [user] (Adobe)/Text/3D Text/3D Twist & color characters.ffx
+- [user] (Adobe)/Text/Animate In/Alternating Characters In.ffx
+- [user] (Adobe)/Text/Animate In/Blinking Cursor Typewriter Console.ffx
+- [user] (Adobe)/Text/Animate In/Center Spiral In.ffx
+- [user] (Adobe)/Text/Animate In/Characters Shuffle In.ffx
+- [user] (Adobe)/Text/Animate In/Decode In By Random Character.ffx
+- [user] (Adobe)/Text/Animate In/Decoder Fade In.ffx
+- [user] (Adobe)/Text/Animate In/Drop In By Character.ffx
+- [user] (Adobe)/Text/Animate In/Espresso Eye Chart.ffx
+- [user] (Adobe)/Text/Animate In/Fade Up And Flip.ffx
+- [user] (Adobe)/Text/Animate In/Fade Up Characters.ffx
+- [user] (Adobe)/Text/Animate In/Fade Up Lines.ffx
+- [user] (Adobe)/Text/Animate In/Fade Up Words.ffx
+- [user] (Adobe)/Text/Animate In/Fly In From Bottom.ffx
+- [user] (Adobe)/Text/Animate In/Fly In With A Twist.ffx
+- [user] (Adobe)/Text/Animate In/Opacity Flicker In.ffx
+- [user] (Adobe)/Text/Animate In/Pop Buzz Words.ffx
+- [user] (Adobe)/Text/Animate In/Raining Characters In.ffx
+- [user] (Adobe)/Text/Animate In/Random Fade In.ffx
+- [user] (Adobe)/Text/Animate In/Random Shuffle In.ffx
+- [user] (Adobe)/Text/Animate In/Random Word Shuffle In.ffx
+- [user] (Adobe)/Text/Animate In/Slide and Pop In.ffx
+- [user] (Adobe)/Text/Animate In/Slide Down By Character.ffx
+- [user] (Adobe)/Text/Animate In/Slide In By Line.ffx
+- [user] (Adobe)/Text/Animate In/Slide In From Comp Edge.ffx
+- [user] (Adobe)/Text/Animate In/Slide Up By Character.ffx
+- [user] (Adobe)/Text/Animate In/Slide Up By Word.ffx
+- [user] (Adobe)/Text/Animate In/Slow Fade On.ffx
+- [user] (Adobe)/Text/Animate In/Smooth Move In.ffx
+- [user] (Adobe)/Text/Animate In/Spin In By Character.ffx
+- [user] (Adobe)/Text/Animate In/Spin In By Word.ffx
+- [user] (Adobe)/Text/Animate In/Straight In By Character.ffx
+- [user] (Adobe)/Text/Animate In/Straight In By Word.ffx
+- [user] (Adobe)/Text/Animate In/Straight In Multi-Line 2.ffx
+- [user] (Adobe)/Text/Animate In/Straight In Multi-Line.ffx
+- [user] (Adobe)/Text/Animate In/Stretch In Each Line.ffx
+- [user] (Adobe)/Text/Animate In/Stretch In Each Word.ffx
+- [user] (Adobe)/Text/Animate In/Twirl On Each Line.ffx
+- [user] (Adobe)/Text/Animate In/Twirl On Each Word.ffx
+- [user] (Adobe)/Text/Animate In/Typewriter.ffx
+- [user] (Adobe)/Text/Animate In/Wipe In To Center.ffx
+- [user] (Adobe)/Text/Animate Out/Alternating Characters Out.ffx
+- [user] (Adobe)/Text/Animate Out/Decode Out By Random Character.ffx
+- [user] (Adobe)/Text/Animate Out/Encoder Fade Out.ffx
+- [user] (Adobe)/Text/Animate Out/Fade Out By Character.ffx
+- [user] (Adobe)/Text/Animate Out/Fade Out Slow.ffx
+- [user] (Adobe)/Text/Animate Out/Opacity Flicker Out.ffx
+- [user] (Adobe)/Text/Animate Out/Raining Characters Out.ffx
+- [user] (Adobe)/Text/Animate Out/Random Fly Off.ffx
+- [user] (Adobe)/Text/Animate Out/Random Word Fly Off.ffx
+- [user] (Adobe)/Text/Animate Out/Slide and Pop Out.ffx
+- [user] (Adobe)/Text/Animate Out/Slide Off Right By Character.ffx
+- [user] (Adobe)/Text/Animate Out/Slide Off Right By Word.ffx
+- [user] (Adobe)/Text/Animate Out/Slide Out By Line.ffx
+- [user] (Adobe)/Text/Animate Out/Slide Out To Comp Edge.ffx
+- [user] (Adobe)/Text/Animate Out/Stretch Out Each Line.ffx
+- [user] (Adobe)/Text/Animate Out/Stretch Out Each Word.ffx
+- [user] (Adobe)/Text/Animate Out/Twirl Off Each Line.ffx
+- [user] (Adobe)/Text/Animate Out/Twirl Off Each Word.ffx
+- [user] (Adobe)/Text/Blurs/Blur and Fade In.ffx
+- [user] (Adobe)/Text/Blurs/Blur and Fade Out.ffx
+- [user] (Adobe)/Text/Blurs/Blur Glitch.ffx
+- [user] (Adobe)/Text/Blurs/Blur In By Word.ffx
+- [user] (Adobe)/Text/Blurs/Bullet Train In.ffx
+- [user] (Adobe)/Text/Blurs/Evaporate Out.ffx
+- [user] (Adobe)/Text/Blurs/Foggy In.ffx
+- [user] (Adobe)/Text/Blurs/Harsh Blur In By Character.ffx
+- [user] (Adobe)/Text/Blurs/Harsh Blur Out By Character.ffx
+- [user] (Adobe)/Text/Blurs/Transporter In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Bloom Flower In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Clockwise Entry.ffx
+- [user] (Adobe)/Text/Curves and Spins/Counter Rotate.ffx
+- [user] (Adobe)/Text/Curves and Spins/Dust Devil Out.ffx
+- [user] (Adobe)/Text/Curves and Spins/Lasso In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Lasso Tumble In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Musical Chairs.ffx
+- [user] (Adobe)/Text/Curves and Spins/Newton.ffx
+- [user] (Adobe)/Text/Curves and Spins/Radial Flare In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Retrograde.ffx
+- [user] (Adobe)/Text/Curves and Spins/Rotate.ffx
+- [user] (Adobe)/Text/Curves and Spins/Somersault In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Spin Fast In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Spiral In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Spiral Out.ffx
+- [user] (Adobe)/Text/Curves and Spins/Swoop In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Tea Leaves In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Tire Rim In.ffx
+- [user] (Adobe)/Text/Curves and Spins/Whirl In.ffx
+- [user] (Adobe)/Text/Expressions/2D Text Box (Mask & Effects).ffx
+- [user] (Adobe)/Text/Expressions/Cycle Word List.ffx
+- [user] (Adobe)/Text/Expressions/Display Comp Time.ffx
+- [user] (Adobe)/Text/Expressions/Frame Number.ffx
+- [user] (Adobe)/Text/Expressions/Inch Worm.ffx
+- [user] (Adobe)/Text/Expressions/Text Bounce.ffx
+- [user] (Adobe)/Text/Expressions/Word List Highlight.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Chasing Stroke.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Chill Hue Shift.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Color Wash Behavior.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Cycle Fill Hue.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Fill Color Wipe.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Flicker Color.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Pulse Orange.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Pulsing Strokes.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Sliding Color Flicker.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Stroke Ease Down.ffx
+- [user] (Adobe)/Text/Fill and Stroke/Wiggly Stroke Width By Line.ffx
+- [user] (Adobe)/Text/Graphical/Blue Note.ffx
+- [user] (Adobe)/Text/Graphical/Cut Shapes.ffx
+- [user] (Adobe)/Text/Graphical/Exchange.ffx
+- [user] (Adobe)/Text/Graphical/Hazard.ffx
+- [user] (Adobe)/Text/Graphical/Red Circles.ffx
+- [user] (Adobe)/Text/Graphical/Scratchy Film.ffx
+- [user] (Adobe)/Text/Graphical/Snowflakes.ffx
+- [user] (Adobe)/Text/Graphical/Yellow Boxes.ffx
+- [user] (Adobe)/Text/Lights and Optical/Broadway.ffx
+- [user] (Adobe)/Text/Lights and Optical/Bubble Pulse.ffx
+- [user] (Adobe)/Text/Lights and Optical/Flash.ffx
+- [user] (Adobe)/Text/Lights and Optical/Flicker Exposure.ffx
+- [user] (Adobe)/Text/Lights and Optical/Fluorescent Light.ffx
+- [user] (Adobe)/Text/Lights and Optical/Office Light.ffx
+- [user] (Adobe)/Text/Lights and Optical/Overlay.ffx
+- [user] (Adobe)/Text/Mechanical/Algorithm In.ffx
+- [user] (Adobe)/Text/Mechanical/Algorithm Loop.ffx
+- [user] (Adobe)/Text/Mechanical/Automation.ffx
+- [user] (Adobe)/Text/Mechanical/Bad Reception.ffx
+- [user] (Adobe)/Text/Mechanical/Doppler.ffx
+- [user] (Adobe)/Text/Mechanical/Electro Magnet In.ffx
+- [user] (Adobe)/Text/Mechanical/Helicopter In.ffx
+- [user] (Adobe)/Text/Mechanical/Insert Text In.ffx
+- [user] (Adobe)/Text/Mechanical/Kinematic In.ffx
+- [user] (Adobe)/Text/Mechanical/Mechanical In.ffx
+- [user] (Adobe)/Text/Mechanical/Pistons.ffx
+- [user] (Adobe)/Text/Mechanical/Rack & Pinion.ffx
+- [user] (Adobe)/Text/Mechanical/Roadtrip 2.ffx
+- [user] (Adobe)/Text/Mechanical/Roadtrip.ffx
+- [user] (Adobe)/Text/Mechanical/Scale Bounce.ffx
+- [user] (Adobe)/Text/Mechanical/Screen Roll.ffx
+- [user] (Adobe)/Text/Mechanical/Stairstep.ffx
+- [user] (Adobe)/Text/Mechanical/Submarine.ffx
+- [user] (Adobe)/Text/Mechanical/Underscore In.ffx
+- [user] (Adobe)/Text/Mechanical/Warp 9.8.ffx
+- [user] (Adobe)/Text/Miscellaneous/Angle Fly-In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Back Flip.ffx
+- [user] (Adobe)/Text/Miscellaneous/Blow Away Out.ffx
+- [user] (Adobe)/Text/Miscellaneous/Bounce In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Bungee.ffx
+- [user] (Adobe)/Text/Miscellaneous/Chaotic In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Clay Pigeons Out.ffx
+- [user] (Adobe)/Text/Miscellaneous/Explode Out.ffx
+- [user] (Adobe)/Text/Miscellaneous/Glitchy Text Decoder.ffx
+- [user] (Adobe)/Text/Miscellaneous/Hop Skip And A Jump.ffx
+- [user] (Adobe)/Text/Miscellaneous/Pendulum In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Question.ffx
+- [user] (Adobe)/Text/Miscellaneous/Rattle.ffx
+- [user] (Adobe)/Text/Miscellaneous/Roll Bounce In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Sequential Jump.ffx
+- [user] (Adobe)/Text/Miscellaneous/Six-Shooter in.ffx
+- [user] (Adobe)/Text/Miscellaneous/Slide Bounce In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Slip In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Smokey.ffx
+- [user] (Adobe)/Text/Miscellaneous/Squeeze.ffx
+- [user] (Adobe)/Text/Miscellaneous/Superhero In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Vanishing Point In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Wiggly Lines In.ffx
+- [user] (Adobe)/Text/Miscellaneous/Yo-Yo.ffx
+- [user] (Adobe)/Text/Multi-Line/Alphabet Soup.ffx
+- [user] (Adobe)/Text/Multi-Line/Alternating Stack In.ffx
+- [user] (Adobe)/Text/Multi-Line/Currents In.ffx
+- [user] (Adobe)/Text/Multi-Line/Data Packet.ffx
+- [user] (Adobe)/Text/Multi-Line/Data Stream In.ffx
+- [user] (Adobe)/Text/Multi-Line/Deal In.ffx
+- [user] (Adobe)/Text/Multi-Line/Encryption In.ffx
+- [user] (Adobe)/Text/Multi-Line/Fly In By Characters.ffx
+- [user] (Adobe)/Text/Multi-Line/Fly In By Words.ffx
+- [user] (Adobe)/Text/Multi-Line/Ideas.ffx
+- [user] (Adobe)/Text/Multi-Line/Jetstream In.ffx
+- [user] (Adobe)/Text/Multi-Line/Pneumatic In.ffx
+- [user] (Adobe)/Text/Multi-Line/Word Processor In.ffx
+- [user] (Adobe)/Text/Multi-Line/Zippy In.ffx
+- [user] (Adobe)/Text/Number Counters/Counter Countdown Monospaced.ffx
+- [user] (Adobe)/Text/Number Counters/Currency Counter Monospaced.ffx
+- [user] (Adobe)/Text/Number Counters/Percentage Counter Monospaced.ffx
+- [user] (Adobe)/Text/Number Counters/Timer Countdown Monospaced.ffx
+- [user] (Adobe)/Text/Organic/Autumn.ffx
+- [user] (Adobe)/Text/Organic/Boiling.ffx
+- [user] (Adobe)/Text/Organic/Boomerang In.ffx
+- [user] (Adobe)/Text/Organic/Chewing Gum In.ffx
+- [user] (Adobe)/Text/Organic/Climb In.ffx
+- [user] (Adobe)/Text/Organic/Diagonal Bounce In.ffx
+- [user] (Adobe)/Text/Organic/Dip-Bounce.ffx
+- [user] (Adobe)/Text/Organic/Double-Helix.ffx
+- [user] (Adobe)/Text/Organic/Fish Bait.ffx
+- [user] (Adobe)/Text/Organic/Flying Formation.ffx
+- [user] (Adobe)/Text/Organic/Horsefly In.ffx
+- [user] (Adobe)/Text/Organic/Hummingbird In.ffx
+- [user] (Adobe)/Text/Organic/Insect Wipe.ffx
+- [user] (Adobe)/Text/Organic/Insects In.ffx
+- [user] (Adobe)/Text/Organic/Labrador In.ffx
+- [user] (Adobe)/Text/Organic/Leapfrog.ffx
+- [user] (Adobe)/Text/Organic/Loose Line.ffx
+- [user] (Adobe)/Text/Organic/Ocean Tide.ffx
+- [user] (Adobe)/Text/Organic/Quiver.ffx
+- [user] (Adobe)/Text/Organic/Ripple In.ffx
+- [user] (Adobe)/Text/Organic/Rubber Floor.ffx
+- [user] (Adobe)/Text/Organic/Rubber.ffx
+- [user] (Adobe)/Text/Organic/Sea-Sick.ffx
+- [user] (Adobe)/Text/Organic/Shuffle.ffx
+- [user] (Adobe)/Text/Organic/Simmer.ffx
+- [user] (Adobe)/Text/Organic/Slice and Dice In.ffx
+- [user] (Adobe)/Text/Organic/Sprouts In.ffx
+- [user] (Adobe)/Text/Organic/Tag Team.ffx
+- [user] (Adobe)/Text/Organic/Wheatfield.ffx
+- [user] (Adobe)/Text/Organic/Wind Current.ffx
+- [user] (Adobe)/Text/Organic/Wobble In.ffx
+- [user] (Adobe)/Text/Paths/360 Loop.ffx
+- [user] (Adobe)/Text/Paths/Antelope.ffx
+- [user] (Adobe)/Text/Paths/Ants.ffx
+- [user] (Adobe)/Text/Paths/Balance.ffx
+- [user] (Adobe)/Text/Paths/Balloon.ffx
+- [user] (Adobe)/Text/Paths/Bouncing.ffx
+- [user] (Adobe)/Text/Paths/Bubble Pop Out.ffx
+- [user] (Adobe)/Text/Paths/Bump And Slide On.ffx
+- [user] (Adobe)/Text/Paths/Circuit Board Out.ffx
+- [user] (Adobe)/Text/Paths/Conveyor Belt.ffx
+- [user] (Adobe)/Text/Paths/Double Spiral.ffx
+- [user] (Adobe)/Text/Paths/Down And Out.ffx
+- [user] (Adobe)/Text/Paths/Downhill Slide Off.ffx
+- [user] (Adobe)/Text/Paths/Hurdles.ffx
+- [user] (Adobe)/Text/Paths/Karate Chop.ffx
+- [user] (Adobe)/Text/Paths/Long Spiral Out.ffx
+- [user] (Adobe)/Text/Paths/Loop In and Out.ffx
+- [user] (Adobe)/Text/Paths/Pipes.ffx
+- [user] (Adobe)/Text/Paths/Rat Nest.ffx
+- [user] (Adobe)/Text/Paths/Reel To Reel.ffx
+- [user] (Adobe)/Text/Paths/Reel-To-Reel 2.ffx
+- [user] (Adobe)/Text/Paths/Rope Bridge.ffx
+- [user] (Adobe)/Text/Paths/Serpent.ffx
+- [user] (Adobe)/Text/Paths/Springy.ffx
+- [user] (Adobe)/Text/Paths/Symmetry.ffx
+- [user] (Adobe)/Text/Paths/Tchotchke.ffx
+- [user] (Adobe)/Text/Paths/Zig-Zag.ffx
+- [user] (Adobe)/Text/Rotation/Drip Down.ffx
+- [user] (Adobe)/Text/Rotation/Flip Up.ffx
+- [user] (Adobe)/Text/Rotation/Full Rotation.ffx
+- [user] (Adobe)/Text/Rotation/Loopy Loop.ffx
+- [user] (Adobe)/Text/Rotation/Random Rotation.ffx
+- [user] (Adobe)/Text/Rotation/Rotate Per Character.ffx
+- [user] (Adobe)/Text/Rotation/Rotate Per Word.ffx
+- [user] (Adobe)/Text/Rotation/Spin In.ffx
+- [user] (Adobe)/Text/Rotation/Swirly Rotation.ffx
+- [user] (Adobe)/Text/Rotation/Whirlwind.ffx
+- [user] (Adobe)/Text/Scale/Lets Dance.ffx
+- [user] (Adobe)/Text/Scale/Random Scale In.ffx
+- [user] (Adobe)/Text/Scale/Scale In By Word.ffx
+- [user] (Adobe)/Text/Scale/Scale In From Point.ffx
+- [user] (Adobe)/Text/Scale/Scale In.ffx
+- [user] (Adobe)/Text/Scale/Scale Out By Word.ffx
+- [user] (Adobe)/Text/Scale/Scale Out From Point.ffx
+- [user] (Adobe)/Text/Scale/Scale Out.ffx
+- [user] (Adobe)/Text/Scale/Wiggly Scale Wipe.ffx
+- [user] (Adobe)/Text/Scale/Zoom Away.ffx
+- [user] (Adobe)/Text/Scale/Zoom Forward.ffx
+- [user] (Adobe)/Text/Tracking/Contract.ffx
+- [user] (Adobe)/Text/Tracking/Decrease Tracking.ffx
+- [user] (Adobe)/Text/Tracking/Extend.ffx
+- [user] (Adobe)/Text/Tracking/Increase Tracking.ffx
+- [user] (Adobe)/Text/Tracking/Magnify.ffx
+- [user] (Adobe)/Text/Tracking/Shift In By Tracking.ffx
+- [user] (Adobe)/Text/Tracking/Shift Out By Tracking.ffx
+- [user] (Adobe)/Text/Tracking/Spasm.ffx
+- [user] (Adobe)/Text/Tracking/Stretchy.ffx
+- [user] (Adobe)/Transitions - Dissolves/Block Dissolve - digital.ffx
+- [user] (Adobe)/Transitions - Dissolves/Block Dissolve - random.ffx
+- [user] (Adobe)/Transitions - Dissolves/Block Dissolve - scanlines.ffx
+- [user] (Adobe)/Transitions - Dissolves/Dissolve - blobs.ffx
+- [user] (Adobe)/Transitions - Dissolves/Dissolve - dither.ffx
+- [user] (Adobe)/Transitions - Dissolves/Dissolve - ripple.ffx
+- [user] (Adobe)/Transitions - Dissolves/Dissolve - sand.ffx
+- [user] (Adobe)/Transitions - Dissolves/Dissolve - unmelt.ffx
+- [user] (Adobe)/Transitions - Dissolves/Dissolve - vapor.ffx
+- [user] (Adobe)/Transitions - Dissolves/Fade - dip to black.ffx
+- [user] (Adobe)/Transitions - Dissolves/Fade - flash to white.ffx
+- [user] (Adobe)/Transitions - Dissolves/Fade - overexposed.ffx
+- [user] (Adobe)/Transitions - Dissolves/Flickering Opacity - at layer in.ffx
+- [user] (Adobe)/Transitions - Dissolves/Flickering Opacity - at layer out.ffx
+- [user] (Adobe)/Transitions - Dissolves/Inky Dissolve.ffx
+- [user] (Adobe)/Transitions - Dissolves/Pixelated Dissolve.ffx
+- [user] (Adobe)/Transitions - Movement/Card Wipe - 2D fractured.ffx
+- [user] (Adobe)/Transitions - Movement/Card Wipe - 3D pixelstorm.ffx
+- [user] (Adobe)/Transitions - Movement/Card Wipe - 3D swing.ffx
+- [user] (Adobe)/Transitions - Movement/Pop and Wobble In.ffx
+- [user] (Adobe)/Transitions - Movement/Scale - Cardinal.ffx
+- [user] (Adobe)/Transitions - Movement/Slide - drop.ffx
+- [user] (Adobe)/Transitions - Movement/Slide - straight.ffx
+- [user] (Adobe)/Transitions - Movement/Slide - swoop.ffx
+- [user] (Adobe)/Transitions - Movement/Stretch - Edge.ffx
+- [user] (Adobe)/Transitions - Movement/Stretch & Blur.ffx
+- [user] (Adobe)/Transitions - Movement/Stretch & Slide.ffx
+- [user] (Adobe)/Transitions - Movement/Stretch Over - horizontal.ffx
+- [user] (Adobe)/Transitions - Movement/Stretch Over - vertical.ffx
+- [user] (Adobe)/Transitions - Movement/Zoom - 2D spin.ffx
+- [user] (Adobe)/Transitions - Movement/Zoom - 3D tumble.ffx
+- [user] (Adobe)/Transitions - Movement/Zoom - bubble.ffx
+- [user] (Adobe)/Transitions - Movement/Zoom - spiral.ffx
+- [user] (Adobe)/Transitions - Movement/Zoom - wobbling.ffx
+- [user] (Adobe)/Transitions - Wipes/Band Wipe - Build HD.ffx
+- [user] (Adobe)/Transitions - Wipes/Band Wipe - crossing HD.ffx
+- [user] (Adobe)/Transitions - Wipes/Band Wipe - Zig Zag HD.ffx
+- [user] (Adobe)/Transitions - Wipes/Barn Doors.ffx
+- [user] (Adobe)/Transitions - Wipes/Checker Wipe HD.ffx
+- [user] (Adobe)/Transitions - Wipes/Clam Shell.ffx
+- [user] (Adobe)/Transitions - Wipes/Clock Wipe.ffx
+- [user] (Adobe)/Transitions - Wipes/Corner Reveal.ffx
+- [user] (Adobe)/Transitions - Wipes/Grid Wipe.ffx
+- [user] (Adobe)/Transitions - Wipes/Inky Iris Wipe.ffx
+- [user] (Adobe)/Transitions - Wipes/Inky Linear Wipe.ffx
+- [user] (Adobe)/Transitions - Wipes/Linear Wipe.ffx
+- [user] (Adobe)/Transitions - Wipes/Paint On.ffx
+- [user] (Adobe)/Transitions - Wipes/Pixelated Iris Wipe.ffx
+- [user] (Adobe)/Transitions - Wipes/Pixelated Linear Wipe.ffx
+- [user] (Adobe)/Transitions - Wipes/Radial Wipe - Cardinal.ffx
+- [user] (Adobe)/Transitions - Wipes/Venetian Blinds.ffx

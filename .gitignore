@@ -1,0 +1,33 @@
+node_modules/
+dist/
+coverage/
+*.log
+*.tgz
+.DS_Store
+.vscode/
+.idea/
+.claude
+
+# Secrets. Nothing here today — the entry exists so the first .env someone
+# creates cannot be committed by accident.
+.env
+.env.*
+
+# Local MCP client wiring pointing at this checkout. Per-developer, and the
+# README tells users to write their own.
+.mcp.json
+
+# Ephemeral file-IPC state exchanged with After Effects (request/response
+# JSON, dispatcher log, test-time project backups) — never committed.
+runtime/
+
+# Private data that stays on this machine
+Brand kit/
+
+# Machine-local settings (logo library path…). Copy config.local.example.json.
+config.local.json
+
+# Client notes and generated client indexes stay on the owner's machine; only
+# the how-to note is shared.
+Kiến thức/Khách hàng/*
+!Kiến thức/Khách hàng/Hướng dẫn.md

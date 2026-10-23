@@ -1,0 +1,109 @@
+# MOGRT
+
+105 items. Scanned at 2026-10-23T03:15:00.361Z.
+
+- [AE] Sports Package/Sports Graphic Overlay.mogrt
+- [AE] Sports Package/Sports Intro.mogrt
+- [AE] Sports Package/Sports Logo Loop.mogrt
+- [AE] Sports Package/Sports Looping Background.mogrt
+- [AE] Sports Package/Sports Lower Third Center.mogrt
+- [AE] Sports Package/Sports Lower Third Side.mogrt
+- [AE] Sports Package/Sports Scoreboard.mogrt
+- [AE] Sports Package/Sports Text Background.mogrt
+- [AE] Sports Package/Sports Transition.mogrt
+- [AE] Video Gaming Package/Gaming Background Loop.mogrt
+- [AE] Video Gaming Package/Gaming Bullet List.mogrt
+- [AE] Video Gaming Package/Gaming Graphic Overlay.mogrt
+- [AE] Video Gaming Package/Gaming Intro.mogrt
+- [AE] Video Gaming Package/Gaming Logo Loop.mogrt
+- [AE] Video Gaming Package/Gaming Lower Third Left.mogrt
+- [AE] Video Gaming Package/Gaming Lower Third Right.mogrt
+- [AE] Video Gaming Package/Gaming Transition.mogrt
+- Basic Lower Third.mogrt
+- Basic Title.mogrt
+- Captions and Subtitles/Bold Broadcast Caption.mogrt
+- Captions and Subtitles/Bold Web Caption.mogrt
+- Captions and Subtitles/Classic Broadcast Caption.mogrt
+- Captions and Subtitles/Classic Web Caption.mogrt
+- Captions and Subtitles/Film Broadcast Caption.mogrt
+- Captions and Subtitles/Film Web Caption.mogrt
+- Captions and Subtitles/Modern Broadcast Caption.mogrt
+- Captions and Subtitles/Modern Web Caption.mogrt
+- Captions and Subtitles/Simple Broadcast Caption.mogrt
+- Captions and Subtitles/Simple Web Caption.mogrt
+- Clean Opener MOGRT.mogrt
+- Color Titles 01.mogrt
+- Color Titles 02.mogrt
+- Color Titles 03.mogrt
+- Color Titles 04.mogrt
+- Color Titles 05.mogrt
+- Color Titles 06.mogrt
+- Color Titles 07.mogrt
+- Color Titles 08.mogrt
+- Color Titles 09.mogrt
+- Color Titles 10.mogrt
+- Color Titles 11.mogrt
+- Color Titles 12.mogrt
+- Credits/Angled Credits.mogrt
+- Credits/Bold Credits.mogrt
+- Credits/Classic Credits.mogrt
+- Credits/Film Credits.mogrt
+- Credits/Modern Credits.mogrt
+- Gold Lower Third 1.mogrt
+- Gold Lower Third 10.mogrt
+- Gold Lower Third 11.mogrt
+- Gold Lower Third 12.mogrt
+- Gold Lower Third 13.mogrt
+- Gold Lower Third 14.mogrt
+- Gold Lower Third 15.mogrt
+- Gold Lower Third 2.mogrt
+- Gold Lower Third 3.mogrt
+- Gold Lower Third 4.mogrt
+- Gold Lower Third 5.mogrt
+- Gold Lower Third 6.mogrt
+- Gold Lower Third 7.mogrt
+- Gold Lower Third 8.mogrt
+- Gold Lower Third 9.mogrt
+- Graphic Overlays/Angled Coming Up Next.mogrt
+- Graphic Overlays/Angled Live Overlay.mogrt
+- Graphic Overlays/Bold Coming Up.mogrt
+- Graphic Overlays/Bold Live Overlay.mogrt
+- Graphic Overlays/Bold Tap to Hear.mogrt
+- Graphic Overlays/Classic Coming Up Next.mogrt
+- Graphic Overlays/Classic Live Overlay.mogrt
+- Graphic Overlays/Film Coming Up.mogrt
+- Graphic Overlays/Film Live Overlay.mogrt
+- Graphic Overlays/Modern Coming Up Next.mogrt
+- Graphic Overlays/Modern Live Overlay.mogrt
+- Lower Thirds/Angled Image Caption.mogrt
+- Lower Thirds/Angled Lower Third.mogrt
+- Lower Thirds/Bold Image Caption.mogrt
+- Lower Thirds/Bold Lower Third Left.mogrt
+- Lower Thirds/Bold Lower Third Right.mogrt
+- Lower Thirds/Classic Image Caption.mogrt
+- Lower Thirds/Classic Lower Third One Line.mogrt
+- Lower Thirds/Classic Lower Third Two Lines.mogrt
+- Lower Thirds/Film Caption.mogrt
+- Lower Thirds/Film Lower Third Left Two Line.mogrt
+- Lower Thirds/Film Lower Third Left.mogrt
+- Lower Thirds/Film Lower Third Right Two Line.mogrt
+- Lower Thirds/Film Lower Third Right.mogrt
+- Lower Thirds/Modern Image Caption.mogrt
+- Slates/Angled Slate.mogrt
+- Slates/Bold Slate.mogrt
+- Slates/Classic Slate.mogrt
+- Slates/Film Slate.mogrt
+- Slates/Modern Slate.mogrt
+- Social Media/Like.mogrt
+- Social Media/Share.mogrt
+- Social Media/Subscribe.mogrt
+- Titles/Angled Presents.mogrt
+- Titles/Angled Title.mogrt
+- Titles/Bold Presents.mogrt
+- Titles/Bold Title.mogrt
+- Titles/Classic Logo Presents.mogrt
+- Titles/Classic Title.mogrt
+- Titles/Film Presents.mogrt
+- Titles/Film Title.mogrt
+- Titles/Modern Presents.mogrt
+- Titles/Modern Title.mogrt
