@@ -9,7 +9,16 @@ import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 
 import { lintCodegenDir, lintCodegenFile } from "./helpers/lint-codegen.js";
-import { findTernaryChains, lintJsxDir } from "./helpers/lint-jsx.js";
+import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import os from "node:os";
+import path from "node:path";
+
+import {
+  findTernaryChains,
+  findTrailingCommas,
+  lintJsxDir,
+  lintJsxFile,
+} from "./helpers/lint-jsx.js";
 
 const JSX_DIR = fileURLToPath(new URL("../jsx/", import.meta.url));
 // Whole of src/, not just operations + tools: the `jsx*` encoder helpers the
@@ -109,5 +118,91 @@ describe("findTernaryChains", () => {
     expect(chains("var o = {\n  x: a ? 1 : 2,\n  y: b ? 3 : 4\n};")).toBe(0);
     // Ternary inside a function call inside a branch.
     expect(chains("var t = a ? f(b ? 1 : 2) : 3;")).toBe(0);
+  });
+});
+
+describe("ES3 reserved words and trailing commas", () => {
+  const dir = mkdtempSync(path.join(os.tmpdir(), "lint-es3-"));
+  const lint = (code: string) => {
+    const f = path.join(dir, `t${Math.random().toString(36).slice(2)}.jsx`);
+    writeFileSync(f, code);
+    return lintJsxFile(f)
+      .filter((x) => x.severity === "error")
+      .map((x) => x.rule);
+  };
+
+  it("flags what After Effects 26.5 rejects", () => {
+    expect(lint("var COL = { char: 1 };")).toContain("es3-reserved-key");
+    expect(lint("var o = { a: 1, default: 2 };")).toContain("es3-reserved-key");
+    expect(lint("var class = 1;")).toContain("es3-reserved-key");
+    expect(lint("var a = [1, 2, ];")).toContain("es3-trailing-comma");
+    expect(lint("var o = {\n  a: 1,\n};")).toContain("es3-trailing-comma");
+  });
+
+  it("stays quiet on what it accepts", () => {
+    // measured: quoted reserved keys and dot access run fine
+    expect(lint('var o = { "class": 1 }; o.default = 2; var chars = 3;')).toEqual([]);
+    expect(lint('var t = a ? 1 : 2; var s = "a, ]";')).toEqual([]);
+    expect(findTrailingCommas("f(a, b)")).toEqual([]);
+  });
+});
+
+describe("hard-coded matchNames are verified", () => {
+  // A matchName After Effects does not have can CRASH it on addProperty
+  // (ADBE Vector Filter - Wiggle Transform, AE 26.5): every literal one in the
+  // code must be in the table dumped from a live AE.
+  const verified = JSON.parse(
+    readFileSync(
+      fileURLToPath(new URL("../Kiến thức/Kỹ thuật/MatchName đã kiểm chứng.json", import.meta.url)),
+      "utf8",
+    ),
+  );
+  const known = new Set<string>([
+    ...Object.keys(verified.effects),
+    ...Object.keys(verified.groups),
+    ...verified.effectsVerifiedOnly,
+  ]);
+  const walk = (n: { matchName: string; addable?: string[]; children?: unknown[] }) => {
+    known.add(n.matchName);
+    for (const a of n.addable ?? []) known.add(a);
+    for (const c of (n.children ?? []) as (typeof n)[]) walk(c);
+  };
+  for (const k of ["layer", "textLayer", "shapeLayer"]) for (const n of verified[k]) walk(n);
+  for (const g of Object.values(verified.groups)) walk(g as never);
+  for (const e of Object.values(verified.effects) as { params: never[] }[])
+    for (const p of e.params) walk(p);
+
+  it('every addProperty("…") literal under src/ and jsx/ is a verified matchName', async () => {
+    const { globSync } = await import("node:fs");
+    const files = [
+      ...globSync("src/**/*.ts", { cwd: fileURLToPath(new URL("..", import.meta.url)) }),
+      ...globSync("jsx/*.jsx", { cwd: fileURLToPath(new URL("..", import.meta.url)) }),
+    ];
+    const bad: string[] = [];
+    for (const f of files) {
+      const text = readFileSync(fileURLToPath(new URL(`../${f}`, import.meta.url)), "utf8");
+      for (const m of text.matchAll(/addProperty\(\s*\\?"([^"\\]+)\\?"/g)) {
+        if (!known.has(m[1])) bad.push(`${f}: ${m[1]}`);
+      }
+    }
+    expect(files.length).toBeGreaterThan(20);
+    expect(bad).toEqual([]);
+  });
+
+  it("AE.SHAPE_ITEMS in toolkit.jsx is exactly the verified shape Contents list", () => {
+    const toolkit = readFileSync(
+      fileURLToPath(new URL("../jsx/toolkit.jsx", import.meta.url)),
+      "utf8",
+    );
+    const block = /AE\.SHAPE_ITEMS = \[([\s\S]*?)\];/.exec(toolkit)![1];
+    const listed = [...block.matchAll(/"([^"]+)"/g)].map((m) => m[1]);
+    const root = verified.shapeLayer.find(
+      (n: { matchName: string }) => n.matchName === "ADBE Root Vectors Group",
+    );
+    expect(listed).toEqual(root.addable);
+  });
+
+  it("names known not to exist are never used", () => {
+    for (const name of Object.keys(verified.notReal)) expect(known.has(name), name).toBe(false);
   });
 });

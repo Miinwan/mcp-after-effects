@@ -116,6 +116,20 @@ Cause: `app.project.bitsPerChannel` is 16 or 32, so frame data is larger than an
 Fix: `ae_previewFrame` automatically converts to 8-bit and shrinks frames to its transfer budget; `path` always points to the full-resolution file.
 Verify: Read `path` for pixel-level inspection; use the returned thumbnail/grid for visual checks. The 32 bpc `saveFrameToPng` near-black trap above is separate and must be cross-checked before changing the grade.
 
+=== Measured on After Effects 26.5 (24/10/2026): rules the offline mock enforces ===
+Every row below was reproduced in a live AE 26.5; tests/helpers/ae-mock.ts emulates each one, and the full matchName table is `Kỹ thuật/MatchName đã kiểm chứng`.
+- An unknown matchName on `addProperty` can CRASH After Effects (the app quits, no error). On shape Contents, `canAddProperty` answers true for ANY name starting "ADBE Vector Filter - ", "ADBE Vector Shape - " or "ADBE Vector Graphic - ", real or not ("ADBE Vector Filter - Wiggle Transform" crashed AE three times; the real Wiggle Transform is "ADBE Vector Filter - Wiggler"). Use `AE.safeAddProperty(group, matchName)`: shape items are checked against `AE.SHAPE_ITEMS`, everything else against `canAddProperty`. Effects and text animators answer `canAddProperty` honestly.
+- Apply Color LUT (`ADBE Apply Color LUT2`) opens a "Choose LUT File..." picker when a script adds it; no script runs until it is answered. `effect.add` refuses it. The picker is drawn by the system's Open and Save Panel Service, so only AE's accessibility window list shows it (`instance.dialogs` reports it, `instance.dismiss_dialog` presses its Cancel).
+- A script that times out is NOT dropped by AE: it stays queued and runs later, after the dialog that blocked it closes. Never resend a call that timed out with "the request WAS picked up"; find out what is blocking (`instance.dialogs`) first.
+- `addProperty` kills handles to the group's OTHER children and everything below them ("Object is invalid"); `moveTo` kills the moved handle too. Transform handles survive an effect add; the 3D switch kills nothing. Re-fetch by name or index after either.
+- Hold-only properties (Checkbox, Dropdown, Layer control, Source Text, Marker): `isInterpolationTypeValid` is false for BEZIER and LINEAR; `setInterpolationTypeAtKey(BEZIER)` throws "Invalid interpolation type"; `setTemporalEaseAtKey` throws "BEZIER interpolation required".
+- `setTemporalEaseAtKey` wants 1 ease for spatial, 1-D, colour and shape values, otherwise value.length: Scale takes 3 even on a 2D layer (2 throws).
+- `new KeyframeEase(speed, 0)` throws: influence must be 0.1–100.
+- `setValue` on a property with keys throws; a separated Position leader and the Z follower of a 2D layer are hidden and throw on write.
+- Two keys 0.01 s apart (inside one frame) are accepted silently — snap key times to frames yourself.
+- ES3: a bare reserved word as an object key (`{ char: 1 }`) or variable name is "Illegal use of reserved word"; a quoted key (`{"class": 1}`) and dot access (`o.default`) run. Trailing commas are lint errors.
+- AE's own alerts (disk cache warning, "Script execution time") leave the button title empty and put "OK"/"Cancel" in its accessibility description.
+
 === Reading ExtendScript errors ===
 Symptom: A localized error appears to point at a surprising line.
 Cause: The host wraps the submitted script before sending it to ExtendScript.

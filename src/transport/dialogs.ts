@@ -43,15 +43,22 @@
 //     cancelled (project left open and dirty), the warning and alert() are
 //     acknowledged. The frontmost app stays frontmost.
 // So there are two tiers:
+//   - A file picker an effect opens on add (Apply Color LUT's "Choose LUT
+//     File...", 24/10/2026) blocks scripting too, but its window belongs to
+//     the system's Open and Save Panel Service, not AE: only AE's AX window
+//     list shows it (AXModal). Found there; dismissed like any dialog.
 //   - Without permission, CGWindowListCopyWindowInfo gives owner pid and
 //     level only: AE windows at levels 8 and 101 are reported, with empty
 //     text; a level-0 dialog (Licensing) is missed. Nothing can be closed —
 //     Escape posted without Accessibility is dropped.
 //   - With Accessibility permission for the app running this server, every
 //     AXModal AE window is reported with its text, and dismissing presses
-//     AXCancelButton if there is one, else focuses the dialog and posts
-//     Escape; if that leaves it open and it has exactly one titled button
-//     (an OK-only warning), that button is pressed. Otherwise it stays open.
+//     AXCancelButton (or a button labelled Cancel) if there is one, else
+//     focuses the dialog and posts Escape; if that leaves it open and it has
+//     exactly one labelled button (an OK-only warning), that button is
+//     pressed. Otherwise it stays open. AE's own alerts (disk cache warning,
+//     "Script execution time") leave AXTitle empty: the label is read from
+//     AXDescription, where Escape alone does not close them (24/10/2026).
 // System Events is deliberately not used: the first Apple event to it raises
 // an Automation consent prompt — itself a modal — and blocks until answered.
 
@@ -233,6 +240,16 @@ function axButtons(el, out, depth) {
   }
   return out;
 }
+// A file picker (NSOpenPanel — Apply Color LUT's "Choose LUT File...") is
+// drawn by the Open and Save Panel Service, so no CG window carries AE's pid;
+// it is found in AE's AX window list (AXModal), or by its Cancel button.
+// AE's own alerts leave AXTitle empty and put the label in AXDescription.
+function buttonLabel(b) { return axString(b, 'AXTitle') || axString(b, 'AXDescription'); }
+function cancelButton(el) {
+  var bs = axButtons(el, [], 0);
+  for (var i = 0; i < bs.length; i++) if (/^(cancel|hủy|huỷ)$/i.test(buttonLabel(bs[i]))) return bs[i];
+  return null;
+}
 function axBool(el, attr) { var v = ax(el, attr); return v ? ObjC.unwrap(ObjC.castRefToObject(v)) == true : false; }
 function axApp(pid, cache) {
   if (cache[pid]) return cache[pid];
@@ -270,13 +287,29 @@ function scan() {
     }
     if (modal) found.push(d);
   });
+  // File pickers are drawn by the system's Open and Save Panel Service, so no
+  // CG window carries AE's pid: they only show up in AE's AX window list.
+  if (trusted) {
+    Object.keys(procs).forEach(function (pid) {
+      var app = axApp(Number(pid), cache);
+      app.wins.forEach(function (aw, i) {
+        if (!aw.title || aw.title === app.title) return;
+        if (found.some(function (f) { return f.el === aw.el; })) return;
+        if (!aw.modal && !cancelButton(aw.el)) return;
+        found.push({ pid: Number(pid), id: pid + ':picker:' + i, text: aw.title, width: aw.size ? Math.round(aw.size[0]) : 0, height: aw.size ? Math.round(aw.size[1]) : 0,
+          window: app.title || null, accessibility: true, startedAt: procs[pid].startedAt, number: null, el: aw.el, picker: aw.title });
+      });
+    });
+  }
   return found;
 }
 function strip(d) { return { pid: d.pid, id: d.id, text: d.text, width: d.width, height: d.height, window: d.window, accessibility: d.accessibility, startedAt: d.startedAt }; }
-function gone(number) {
+function gone(number, d) {
   for (var i = 0; i < 10; i++) {
     delay(0.1);
-    if (!cgWindows().some(function (w) { return w.kCGWindowNumber === number; })) return true;
+    if (number === null && d) {
+      if (!axApp(d.pid, {}).wins.some(function (aw) { return aw.title === d.picker; })) return true;
+    } else if (!cgWindows().some(function (w) { return w.kCGWindowNumber === number; })) return true;
   }
   return false;
 }
@@ -286,10 +319,10 @@ function dismiss(target) {
   scan().forEach(function (x) { if (x.id === target) d = x; });
   if (!d) { none.reason = 'not_found'; return none; }
   if (!trusted) { none.reason = 'no_permission'; return none; }
-  var cancel = d.el ? axElement(d.el, 'AXCancelButton') : null;
+  var cancel = d.el ? (axElement(d.el, 'AXCancelButton') || cancelButton(d.el)) : null;
   if (cancel) {
     $.AXUIElementPerformAction(cancel, $('AXPress'));
-    return { posted: true, closed: gone(d.number), text: d.text || null, method: 'cancel_button' };
+    return { posted: true, closed: gone(d.number, d), text: d.text || null, method: 'cancel_button' };
   }
   // AE exposes no AXCancelButton. Escape goes to the app's focused window,
   // which is often the main window rather than the dialog, so focus the
@@ -299,13 +332,13 @@ function dismiss(target) {
     $.AXUIElementSetAttributeValue(d.el, $('AXFocused'), $.kCFBooleanTrue);
   }
   [true, false].forEach(function (down) { $.CGEventPostToPid(d.pid, $.CGEventCreateKeyboardEvent($(), 53, down)); });
-  if (gone(d.number)) return { posted: true, closed: true, text: d.text || null, method: 'escape' };
+  if (gone(d.number, d)) return { posted: true, closed: true, text: d.text || null, method: 'escape' };
   // Escape did nothing: an OK-only warning has no choice to make, so its one
   // button is pressed; anything offering choices is left for the user.
-  var buttons = d.el ? axButtons(d.el, [], 0).filter(function (b) { return axString(b, 'AXTitle'); }) : [];
+  var buttons = d.el ? axButtons(d.el, [], 0).filter(function (b) { return buttonLabel(b); }) : [];
   if (buttons.length === 1) {
     $.AXUIElementPerformAction(buttons[0], $('AXPress'));
-    return { posted: true, closed: gone(d.number), text: d.text || null, method: 'only_button' };
+    return { posted: true, closed: gone(d.number, d), text: d.text || null, method: 'only_button' };
   }
   return { posted: true, closed: false, text: d.text || null, method: 'escape' };
 }
@@ -459,7 +492,7 @@ export async function dismissAeDialog(
     text: null,
     reason: "not_found",
   };
-  const shape = platform === "darwin" ? /^\d{1,10}:\d{1,10}$/ : /^\d{1,20}$/;
+  const shape = platform === "darwin" ? /^\d{1,10}:(?:\d{1,10}|picker:\d{1,3})$/ : /^\d{1,20}$/;
   if (!scanSupported(platform) || !shape.test(id)) return notFound;
   try {
     const raw =

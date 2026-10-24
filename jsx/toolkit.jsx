@@ -145,6 +145,51 @@ AE._offsetOne = function (prop, delta) {
     return 0;
 };
 
+// Shape Contents items After Effects 26.5 really has. On shape Contents,
+// canAddProperty answers true for ANY name that starts with "ADBE Vector
+// Filter - ", "ADBE Vector Shape - " or "ADBE Vector Graphic - " — and
+// addProperty with a made-up one of those CRASHES After Effects (measured
+// 24/10/2026 with "ADBE Vector Filter - Wiggle Transform"). So shape items are
+// checked against this list, not canAddProperty.
+AE.SHAPE_ITEMS = [
+    "ADBE Vector Group",
+    "ADBE Vector Shape - Rect",
+    "ADBE Vector Shape - Ellipse",
+    "ADBE Vector Shape - Star",
+    "ADBE Vector Shape - Group",
+    "ADBE Vector Graphic - Fill",
+    "ADBE Vector Graphic - Stroke",
+    "ADBE Vector Graphic - G-Fill",
+    "ADBE Vector Graphic - G-Stroke",
+    "ADBE Vector Filter - Trim",
+    "ADBE Vector Filter - Merge",
+    "ADBE Vector Filter - Repeater",
+    "ADBE Vector Filter - RC",
+    "ADBE Vector Filter - Offset",
+    "ADBE Vector Filter - Wiggler",
+    "ADBE Vector Filter - Zigzag",
+    "ADBE Vector Filter - PB",
+    "ADBE Vector Filter - Twist",
+    "ADBE Vector Filter - Roughen"
+];
+AE.isShapeContents = function (group) {
+    var m = "";
+    try { m = group.matchName; } catch (eM) {}
+    return m === "ADBE Root Vectors Group" || m === "ADBE Vectors Group";
+};
+// addProperty that cannot crash AE: shape items must be on AE.SHAPE_ITEMS,
+// anything else must pass canAddProperty. Throws a plain error otherwise.
+AE.safeAddProperty = function (group, matchName) {
+    if (AE.isShapeContents(group)) {
+        var known = false;
+        for (var i = 0; i < AE.SHAPE_ITEMS.length; i++) if (AE.SHAPE_ITEMS[i] === matchName) known = true;
+        if (!known) throw new Error("'" + matchName + "' is not a shape item After Effects has (adding it would crash AE); known: " + AE.SHAPE_ITEMS.join(", "));
+    } else if (!group.canAddProperty(matchName)) {
+        throw new Error("group '" + group.matchName + "' cannot add '" + matchName + "'");
+    }
+    return group.addProperty(matchName);
+};
+
 // Resolve a property path (array of names/matchNames/indices) below `root`.
 // Returns null when any segment is missing instead of throwing.
 AE.propertyAtPath = function (root, path) {

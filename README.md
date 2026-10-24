@@ -218,7 +218,7 @@ Then every tool takes an optional `instance` argument, `AE_MCP_INSTANCE` sets th
 
 ```bash
 npm run build          # compile TypeScript to dist/
-npm test               # unit tests (e2e suites skip themselves without After Effects)
+npm test               # unit tests, incl. an offline After Effects mock that runs the generated JSX (e2e suites skip themselves without After Effects)
 npm run check          # typecheck, lint, format, JSX ES3 lint, server.json, tool docs
 npm run quet-plugin    # rescan installed plug-ins into the knowledge base
 ```

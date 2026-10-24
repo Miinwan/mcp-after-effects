@@ -122,7 +122,7 @@ State readback proves data, not appearance. Use `ae_previewFrame` after visual c
 
 ## ExtendScript essentials
 
-AE uses ECMAScript 3: `var`, `function`, traditional loops. End reads with `JSON.stringify(...)`; guard fallible lookups for structured errors. Prefer `matchName` paths; use effect-property indices when localized names fail; reacquire references after `addProperty`.
+AE uses ECMAScript 3: `var`, `function`, traditional loops. Never `addProperty` a matchName that is not in `Kỹ thuật/MatchName đã kiểm chứng` — an unknown one can crash After Effects, and shape Contents' `canAddProperty` cannot tell (use `AE.safeAddProperty`). After a timeout, check `instance.dialogs` before sending anything else: AE queues the timed-out script and runs it later. End reads with `JSON.stringify(...)`; guard fallible lookups for structured errors. Prefer `matchName` paths; use effect-property indices when localized names fail; reacquire references after `addProperty`.
 
 Disable and read back a layer (`AeExecArgs`):
 <!-- AE_EXEC_EXAMPLE -->

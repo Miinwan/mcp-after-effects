@@ -203,6 +203,9 @@ AE.importProject = function (doc, opts) {
                     for (var ei = 0; ei < lspec.effectsGroup.groups.length; ei++) {
                         var effSpec = lspec.effectsGroup.groups[ei];
                         try {
+                            // An unknown matchName can crash AE on addProperty; check first.
+                            if (!fxRoot.canAddProperty(effSpec.matchName)) { warn("effect " + effSpec.matchName + " is not installed (layer '" + lspec.name + "')"); continue; }
+                            if (effSpec.matchName === "ADBE Apply Color LUT2") { warn("skipped Apply Color LUT on layer '" + lspec.name + "': it opens a file picker that blocks scripting"); continue; }
                             var addedEffect = fxRoot.addProperty(effSpec.matchName);
                             if (effSpec.name) addedEffect.name = effSpec.name;
                             AE.applyPropertyGroup(addedEffect, effSpec, warn);
@@ -354,7 +357,13 @@ AE.importShapeContents = function (target, spec, warn) {
             var sub = null;
             try { sub = target.property(gs.matchName); } catch (eSub1) {}
             if (!sub) {
-                try { sub = target.addProperty(gs.matchName); } catch (eAdd) {
+                var canAdd = false;
+                try { canAdd = target.canAddProperty(gs.matchName); } catch (eCan) {}
+                if (!canAdd) {
+                    if (warn) warn("could not add shape group " + gs.matchName + ": not a matchName this group takes");
+                    continue;
+                }
+                try { sub = AE.safeAddProperty(target, gs.matchName); } catch (eAdd) {
                     if (warn) warn("could not add shape group " + gs.matchName + ": " + AE.errText(eAdd));
                     continue;
                 }

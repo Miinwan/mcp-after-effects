@@ -1,0 +1,501 @@
+# MatchName đã kiểm chứng — Use when an operation or eval.run script addresses a property, shape item, text animator piece or effect by matchName. Lists every matchName verified in a live After Effects 26.5 with its display name, value type and hold-only flag, plus names that do not exist, crash AE or open a dialog.
+
+> Dumped from a live After Effects 26.5 (24/10/2026) by walking real layers and adding each item one call at a time. The full tree with default values is in `MatchName đã kiểm chứng.json` (also the whitelist of the offline AE mock in `tests/helpers/ae-mock.ts`). Anything not listed: check it in a real AE with `canAddProperty` before relying on it.
+
+## Never use
+
+| Name | What happens | Use instead |
+|---|---|---|
+| `ADBE Vector Filter - Wiggle Transform` | `addProperty` CRASHES After Effects (no error, the app quits) | `ADBE Vector Filter - Wiggler` (`shape.add_wiggle_transform`) |
+| `ADBE Mask Expansion` | `property()` returns null | `ADBE Mask Offset` |
+| `ADBE Vignette` | no such effect (`canAddProperty` false) | black solid + feathered SUBTRACT mask |
+| `ADBE Apply Color LUT2` (via script) | opens a "Choose LUT File..." picker; scripting blocks until it is cancelled | `color.setup` / Lumetri, or set the LUT by hand |
+
+Rule: an unknown matchName is not always a harmless null — `addProperty` can crash AE. Always `canAddProperty(m)` before `addProperty(m)`.
+
+## Layer (solid / footage / null)
+
+- `ADBE Marker` Marker (marker · hold only)
+- `ADBE Time Remapping` Time Remap (1D)
+- `ADBE MTrackers` Motion Trackers (indexed group)
+- `ADBE Mask Parade` Masks (indexed group)
+- `ADBE Effect Parade` Effects (indexed group)
+- `ADBE Transform Group` Transform (group)
+  - `ADBE Anchor Point` Anchor Point (3D spatial)
+  - `ADBE Position` Position (3D spatial)
+  - `ADBE Position_0` X Position (1D)
+  - `ADBE Position_1` Y Position (1D)
+  - `ADBE Position_2` Z Position (1D)
+  - `ADBE Scale` Scale (3D)
+  - `ADBE Orientation` Orientation (3D spatial)
+  - `ADBE Rotate X` X Rotation (1D)
+  - `ADBE Rotate Y` Y Rotation (1D)
+  - `ADBE Rotate Z` Rotation (1D)
+  - `ADBE Opacity` Opacity (1D)
+  - `ADBE Envir Appear in Reflect` Appears in Reflections (1D)
+- `ADBE Layer Styles` Layer Styles (group)
+- `ADBE Plane Options Group` Geometry Options (group)
+- `ADBE Extrsn Options Group` Geometry Options (group)
+- `ADBE Material Options Group` Material Options (group)
+- `ADBE Audio Group` Audio (group)
+  - `ADBE Audio Levels` Audio Levels (2D)
+- `ADBE Data Group` Data (indexed group)
+- `ADBE Layer Overrides` Essential Properties (indexed group)
+- `ADBE Layer Sets` Sets (indexed group)
+- `ADBE Source Options Group` Replace Source (group)
+## Text layer (extra groups)
+
+- `ADBE Text Properties` Text (group)
+  - `ADBE Text Document` Source Text (text · hold only)
+  - `ADBE Text Path Options` Path Options (group)
+    - `ADBE Text Path` Path (mask)
+    - `ADBE Text Reverse Path` Reverse Path (1D · hold only)
+    - `ADBE Text Perpendicular To Path` Perpendicular To Path (1D · hold only)
+    - `ADBE Text Force Align Path` Force Alignment (1D · hold only)
+    - `ADBE Text First Margin` First Margin (1D)
+    - `ADBE Text Last Margin` Last Margin (1D)
+  - `ADBE Text More Options` More Options (group)
+    - `ADBE Text Anchor Point Option` Anchor Point Grouping (1D)
+    - `ADBE Text Anchor Point Align` Grouping Alignment (2D)
+    - `ADBE Text Render Order` Fill & Stroke (1D)
+    - `ADBE Text Character Blend Mode` Inter-Character Blending (1D)
+    - `ADBE Text Variable Font Spacing` Variable Font Spacing (1D)
+  - `ADBE Text Animators` Animators (indexed group)
+
+## Shape layer: Contents items
+
+- `ADBE Vector Group` Group 1
+  - `ADBE Vector Blend Mode` Blend Mode (1D)
+  - `ADBE Vectors Group` Contents (indexed group)
+  - `ADBE Vector Transform Group` Transform (group)
+    - `ADBE Vector Anchor` Anchor Point (2D spatial)
+    - `ADBE Vector Position` Position (2D spatial)
+    - `ADBE Vector Scale` Scale (2D)
+    - `ADBE Vector Skew` Skew (1D)
+    - `ADBE Vector Skew Axis` Skew Axis (1D)
+    - `ADBE Vector Rotation` Rotation (1D)
+    - `ADBE Vector Group Opacity` Opacity (1D)
+  - `ADBE Vector Materials Group` Material Options (group)
+    - `ADBE Vec3D Front RGB` Front Color (colour)
+    - `ADBE Vec3D Front Ambient` Front Ambient (1D)
+    - `ADBE Vec3D Front Diffuse` Front Diffuse (1D)
+    - `ADBE Vec3D Front Specular` Front Specular Intensity (1D)
+    - `ADBE Vec3D Front Shininess` Front Specular Shininess (1D)
+    - `ADBE Vec3D Front Metal` Front Metal (1D)
+    - `ADBE Vec3D Front Reflection` Front Reflection Intensity (1D)
+    - `ADBE Vec3D Front Gloss` Front Reflection Sharpness (1D)
+    - `ADBE Vec3D Front Fresnel` Front Reflection Rolloff (1D)
+    - `ADBE Vec3D Front Xparency` Front Transparency (1D)
+    - `ADBE Vec3D Front XparRoll` Front Transparency Rolloff (1D)
+    - `ADBE Vec3D Front IOR` Front Index of Refraction (1D)
+    - `ADBE Vec3D Bevel RGB` Bevel Color (colour)
+    - `ADBE Vec3D Bevel Ambient` Bevel Ambient (1D)
+    - `ADBE Vec3D Bevel Diffuse` Bevel Diffuse (1D)
+    - `ADBE Vec3D Bevel Specular` Bevel Specular Intensity (1D)
+    - `ADBE Vec3D Bevel Shininess` Bevel Specular Shininess (1D)
+    - `ADBE Vec3D Bevel Metal` Bevel Metal (1D)
+    - `ADBE Vec3D Bevel Reflection` Bevel Reflection Intensity (1D)
+    - `ADBE Vec3D Bevel Gloss` Bevel Reflection Sharpness (1D)
+    - `ADBE Vec3D Bevel Fresnel` Bevel Reflection Rolloff (1D)
+    - `ADBE Vec3D Bevel Xparency` Bevel Transparency (1D)
+    - `ADBE Vec3D Bevel XparRoll` Bevel Transparency Rolloff (1D)
+    - `ADBE Vec3D Bevel IOR` Bevel Index of Refraction (1D)
+    - `ADBE Vec3D Side RGB` Side Color (colour)
+    - `ADBE Vec3D Side Ambient` Side Ambient (1D)
+    - `ADBE Vec3D Side Diffuse` Side Diffuse (1D)
+    - `ADBE Vec3D Side Specular` Side Specular Intensity (1D)
+    - `ADBE Vec3D Side Shininess` Side Specular Shininess (1D)
+    - `ADBE Vec3D Side Metal` Side Metal (1D)
+    - `ADBE Vec3D Side Reflection` Side Reflection Intensity (1D)
+    - `ADBE Vec3D Side Gloss` Side Reflection Sharpness (1D)
+    - `ADBE Vec3D Side Fresnel` Side Reflection Rolloff (1D)
+    - `ADBE Vec3D Side Xparency` Side Transparency (1D)
+    - `ADBE Vec3D Side XparRoll` Side Transparency Rolloff (1D)
+    - `ADBE Vec3D Side IOR` Side Index of Refraction (1D)
+    - `ADBE Vec3D Back RGB` Back Color (colour)
+    - `ADBE Vec3D Back Ambient` Back Ambient (1D)
+    - `ADBE Vec3D Back Diffuse` Back Diffuse (1D)
+    - `ADBE Vec3D Back Specular` Back Specular Intensity (1D)
+    - `ADBE Vec3D Back Shininess` Back Specular Shininess (1D)
+    - `ADBE Vec3D Back Metal` Back Metal (1D)
+    - `ADBE Vec3D Back Reflection` Back Reflection Intensity (1D)
+    - `ADBE Vec3D Back Gloss` Back Reflection Sharpness (1D)
+    - `ADBE Vec3D Back Fresnel` Back Reflection Rolloff (1D)
+    - `ADBE Vec3D Back Xparency` Back Transparency (1D)
+    - `ADBE Vec3D Back XparRoll` Back Transparency Rolloff (1D)
+    - `ADBE Vec3D Back IOR` Back Index of Refraction (1D)
+- `ADBE Vector Shape - Rect` Rectangle Path 1
+  - `ADBE Vector Shape Direction` Shape Direction (1D)
+  - `ADBE Vector Rect Size` Size (2D)
+  - `ADBE Vector Rect Position` Position (2D spatial)
+  - `ADBE Vector Rect Roundness` Roundness (1D)
+- `ADBE Vector Shape - Ellipse` Ellipse Path 1
+  - `ADBE Vector Shape Direction` Shape Direction (1D)
+  - `ADBE Vector Ellipse Size` Size (2D)
+  - `ADBE Vector Ellipse Position` Position (2D spatial)
+- `ADBE Vector Shape - Star` Polystar Path 1
+  - `ADBE Vector Shape Direction` Shape Direction (1D)
+  - `ADBE Vector Star Type` Type (1D)
+  - `ADBE Vector Star Points` Points (1D)
+  - `ADBE Vector Star Position` Position (2D spatial)
+  - `ADBE Vector Star Rotation` Rotation (1D)
+  - `ADBE Vector Star Inner Radius` Inner Radius (1D)
+  - `ADBE Vector Star Outer Radius` Outer Radius (1D)
+  - `ADBE Vector Star Inner Roundess` Inner Roundness (1D)
+  - `ADBE Vector Star Outer Roundess` Outer Roundness (1D)
+- `ADBE Vector Shape - Group` Path 1
+  - `ADBE Vector Shape Direction` Shape Direction (1D)
+  - `ADBE Vector Shape` Path (shape)
+- `ADBE Vector Graphic - Fill` Fill 1
+  - `ADBE Vector Blend Mode` Blend Mode (1D)
+  - `ADBE Vector Composite Order` Composite (1D)
+  - `ADBE Vector Fill Rule` Fill Rule (1D)
+  - `ADBE Vector Fill Color` Color (colour)
+  - `ADBE Vector Fill Opacity` Opacity (1D)
+- `ADBE Vector Graphic - Stroke` Stroke 1
+  - `ADBE Vector Blend Mode` Blend Mode (1D)
+  - `ADBE Vector Composite Order` Composite (1D)
+  - `ADBE Vector Stroke Color` Color (colour)
+  - `ADBE Vector Stroke Opacity` Opacity (1D)
+  - `ADBE Vector Stroke Width` Stroke Width (1D)
+  - `ADBE Vector Stroke Line Cap` Line Cap (1D)
+  - `ADBE Vector Stroke Line Join` Line Join (1D)
+  - `ADBE Vector Stroke Miter Limit` Miter Limit (1D)
+  - `ADBE Vector Stroke Dashes` Dashes (group)
+    - `ADBE Vector Stroke Dash 1` Dash (1D)
+    - `ADBE Vector Stroke Gap 1` Gap (1D)
+    - `ADBE Vector Stroke Dash 2` Dash 2 (1D)
+    - `ADBE Vector Stroke Gap 2` Gap 2 (1D)
+    - `ADBE Vector Stroke Dash 3` Dash 3 (1D)
+    - `ADBE Vector Stroke Gap 3` Gap 3 (1D)
+    - `ADBE Vector Stroke Offset` Offset (1D)
+  - `ADBE Vector Stroke Taper` Taper (group)
+    - `ADBE Vector Taper Length Units` Length Units (1D)
+    - `ADBE Vector Taper Start Length` Start Length (1D)
+    - `ADBE Vector Taper End Length` End Length (1D)
+    - `ADBE Vector Taper StartWidthPx` Start Length (1D)
+    - `ADBE Vector Taper EndWidthPx` End Length (1D)
+    - `ADBE Vector Taper Start Width` Start Width (1D)
+    - `ADBE Vector Taper End Width` End Width (1D)
+    - `ADBE Vector Taper Start Ease` Start Ease (1D)
+    - `ADBE Vector Taper End Ease` End Ease (1D)
+  - `ADBE Vector Stroke Wave` Wave (group)
+    - `ADBE Vector Taper Wave Amount` Amount (1D)
+    - `ADBE Vector Taper Wave Units` Units (1D)
+    - `ADBE Vector Taper Wavelength` Wavelength (1D)
+    - `ADBE Vector Taper Wave Cycles` Cycles (1D)
+    - `ADBE Vector Taper Wave Phase` Phase (1D)
+- `ADBE Vector Graphic - G-Fill` Gradient Fill 1
+  - `ADBE Vector Blend Mode` Blend Mode (1D)
+  - `ADBE Vector Composite Order` Composite (1D)
+  - `ADBE Vector Fill Rule` Fill Rule (1D)
+  - `ADBE Vector Grad Type` Type (1D)
+  - `ADBE Vector Grad Start Pt` Start Point (2D spatial)
+  - `ADBE Vector Grad End Pt` End Point (2D spatial)
+  - `ADBE Vector Grad HiLite Length` Highlight Length (1D)
+  - `ADBE Vector Grad HiLite Angle` Highlight Angle (1D)
+  - `ADBE Vector Grad Scale` Scale (2D)
+  - `ADBE Vector Grad Rotation` Rotation (1D)
+  - `ADBE Vector Grad Colors` Colors (—)
+  - `ADBE Vector Fill Opacity` Opacity (1D)
+- `ADBE Vector Graphic - G-Stroke` Gradient Stroke 1
+  - `ADBE Vector Blend Mode` Blend Mode (1D)
+  - `ADBE Vector Composite Order` Composite (1D)
+  - `ADBE Vector Grad Type` Type (1D)
+  - `ADBE Vector Grad Start Pt` Start Point (2D spatial)
+  - `ADBE Vector Grad End Pt` End Point (2D spatial)
+  - `ADBE Vector Grad HiLite Length` Highlight Length (1D)
+  - `ADBE Vector Grad HiLite Angle` Highlight Angle (1D)
+  - `ADBE Vector Grad Scale` Scale (2D)
+  - `ADBE Vector Grad Rotation` Rotation (1D)
+  - `ADBE Vector Grad Colors` Colors (—)
+  - `ADBE Vector Stroke Opacity` Opacity (1D)
+  - `ADBE Vector Stroke Width` Stroke Width (1D)
+  - `ADBE Vector Stroke Line Cap` Line Cap (1D)
+  - `ADBE Vector Stroke Line Join` Line Join (1D)
+  - `ADBE Vector Stroke Miter Limit` Miter Limit (1D)
+  - `ADBE Vector Stroke Dashes` Dashes (group)
+    - `ADBE Vector Stroke Dash 1` Dash (1D)
+    - `ADBE Vector Stroke Gap 1` Gap (1D)
+    - `ADBE Vector Stroke Dash 2` Dash 2 (1D)
+    - `ADBE Vector Stroke Gap 2` Gap 2 (1D)
+    - `ADBE Vector Stroke Dash 3` Dash 3 (1D)
+    - `ADBE Vector Stroke Gap 3` Gap 3 (1D)
+    - `ADBE Vector Stroke Offset` Offset (1D)
+  - `ADBE Vector Stroke Taper` Taper (group)
+    - `ADBE Vector Taper Length Units` Length Units (1D)
+    - `ADBE Vector Taper Start Length` Start Length (1D)
+    - `ADBE Vector Taper End Length` End Length (1D)
+    - `ADBE Vector Taper StartWidthPx` Start Length (1D)
+    - `ADBE Vector Taper EndWidthPx` End Length (1D)
+    - `ADBE Vector Taper Start Width` Start Width (1D)
+    - `ADBE Vector Taper End Width` End Width (1D)
+    - `ADBE Vector Taper Start Ease` Start Ease (1D)
+    - `ADBE Vector Taper End Ease` End Ease (1D)
+  - `ADBE Vector Stroke Wave` Wave (group)
+    - `ADBE Vector Taper Wave Amount` Amount (1D)
+    - `ADBE Vector Taper Wave Units` Units (1D)
+    - `ADBE Vector Taper Wavelength` Wavelength (1D)
+    - `ADBE Vector Taper Wave Cycles` Cycles (1D)
+    - `ADBE Vector Taper Wave Phase` Phase (1D)
+- `ADBE Vector Filter - Trim` Trim Paths 1
+  - `ADBE Vector Trim Start` Start (1D)
+  - `ADBE Vector Trim End` End (1D)
+  - `ADBE Vector Trim Offset` Offset (1D)
+  - `ADBE Vector Trim Type` Trim Multiple Shapes (1D)
+- `ADBE Vector Filter - Merge` Merge Paths 1
+  - `ADBE Vector Merge Type` Mode (1D)
+- `ADBE Vector Filter - Repeater` Repeater 1
+  - `ADBE Vector Repeater Copies` Copies (1D)
+  - `ADBE Vector Repeater Offset` Offset (1D)
+  - `ADBE Vector Repeater Order` Composite (1D)
+  - `ADBE Vector Repeater Transform` Transform (group)
+    - `ADBE Vector Repeater Anchor` Anchor Point (2D spatial)
+    - `ADBE Vector Repeater Position` Position (2D spatial)
+    - `ADBE Vector Repeater Scale` Scale (2D)
+    - `ADBE Vector Repeater Rotation` Rotation (1D)
+    - `ADBE Vector Repeater Opacity 1` Start Opacity (1D)
+    - `ADBE Vector Repeater Opacity 2` End Opacity (1D)
+- `ADBE Vector Filter - RC` Round Corners 1
+  - `ADBE Vector RoundCorner Radius` Radius (1D)
+- `ADBE Vector Filter - Offset` Offset Paths 1
+  - `ADBE Vector Offset Amount` Amount (1D)
+  - `ADBE Vector Offset Line Join` Line Join (1D)
+  - `ADBE Vector Offset Miter Limit` Miter Limit (1D)
+  - `ADBE Vector Offset Copies` Copies (1D)
+  - `ADBE Vector Offset Copy Offset` Copy Offset (1D)
+- `ADBE Vector Filter - Wiggler` Wiggle Transform 1
+  - `ADBE Vector Xform Temporal Freq` Wiggles/Second (1D · hold only)
+  - `ADBE Vector Correlation` Correlation (1D · hold only)
+  - `ADBE Vector Temporal Phase` Temporal Phase (1D)
+  - `ADBE Vector Spatial Phase` Spatial Phase (1D)
+  - `ADBE Vector Random Seed` Random Seed (1D)
+  - `ADBE Vector Wiggler Transform` Transform (group)
+    - `ADBE Vector Wiggler Anchor` Anchor Point (2D spatial)
+    - `ADBE Vector Wiggler Position` Position (2D spatial)
+    - `ADBE Vector Wiggler Scale` Scale (2D)
+    - `ADBE Vector Wiggler Rotation` Rotation (1D)
+- `ADBE Vector Filter - Zigzag` Zig Zag 1
+  - `ADBE Vector Zigzag Size` Size (1D)
+  - `ADBE Vector Zigzag Detail` Ridges per segment (1D)
+  - `ADBE Vector Zigzag Points` Points (1D · hold only)
+- `ADBE Vector Filter - PB` Pucker & Bloat 1
+  - `ADBE Vector PuckerBloat Amount` Amount (1D)
+- `ADBE Vector Filter - Twist` Twist 1
+  - `ADBE Vector Twist Angle` Angle (1D)
+  - `ADBE Vector Twist Center` Center (2D spatial)
+- `ADBE Vector Filter - Roughen` Wiggle Paths 1
+  - `ADBE Vector Roughen Size` Size (1D)
+  - `ADBE Vector Roughen Detail` Detail (1D)
+  - `ADBE Vector Roughen Points` Points (1D · hold only)
+  - `ADBE Vector Temporal Freq` Wiggles/Second (1D · hold only)
+  - `ADBE Vector Correlation` Correlation (1D · hold only)
+  - `ADBE Vector Temporal Phase` Temporal Phase (1D)
+  - `ADBE Vector Spatial Phase` Spatial Phase (1D)
+  - `ADBE Vector Random Seed` Random Seed (1D)
+
+## Masks
+
+- `ADBE Mask Atom` Mask 1 (group)
+  - `ADBE Mask Shape` Mask Path (shape)
+  - `ADBE Mask Feather` Mask Feather (2D)
+  - `ADBE Mask Opacity` Mask Opacity (1D)
+  - `ADBE Mask Offset` Mask Expansion (1D)
+
+## Text animators
+
+- `ADBE Text Animator` Animator 1
+  - `ADBE Text Selectors` Selectors (indexed group)
+  - `ADBE Text Animator Properties` Properties (group)
+    - `ADBE Text Anchor Point 3D` Anchor Point (3D spatial)
+    - `ADBE Text Position 3D` Position (3D spatial)
+    - `ADBE Text Scale 3D` Scale (3D)
+    - `ADBE Text Skew` Skew (1D)
+    - `ADBE Text Skew Axis` Skew Axis (1D)
+    - `ADBE Text Rotation X` X Rotation (1D)
+    - `ADBE Text Rotation Y` Y Rotation (1D)
+    - `ADBE Text Rotation` Rotation (1D)
+    - `ADBE Text Opacity` Opacity (1D)
+    - `ADBE Text Fill Opacity` Fill Opacity (1D)
+    - `ADBE Text Stroke Opacity` Stroke Opacity (1D)
+    - `ADBE Text Fill Color` Fill Color (colour)
+    - `ADBE Text Stroke Color` Stroke Color (colour)
+    - `ADBE Text Fill Hue` Fill Hue (1D)
+    - `ADBE Text Stroke Hue` Stroke Hue (1D)
+    - `ADBE Text Fill Saturation` Fill Saturation (1D)
+    - `ADBE Text Stroke Saturation` Stroke Saturation (1D)
+    - `ADBE Text Fill Brightness` Fill Brightness (1D)
+    - `ADBE Text Stroke Brightness` Stroke Brightness (1D)
+    - `ADBE 3DText Front RGB` Front Color (colour)
+    - `ADBE 3DText Front Hue` Front Hue (1D)
+    - `ADBE 3DText Front Sat` Front Saturation (1D)
+    - `ADBE 3DText Front Bright` Front Brightness (1D)
+    - `ADBE 3DText Front Opacity` Front Opacity (1D)
+    - `ADBE 3DText Front Ambient` Front Ambient (1D)
+    - `ADBE 3DText Front Diffuse` Front Diffuse (1D)
+    - `ADBE 3DText Front Specular` Front Specular Intensity (1D)
+    - `ADBE 3DText Front Shininess` Front Specular Shininess (1D)
+    - `ADBE 3DText Front Metal` Front Metal (1D)
+    - `ADBE 3DText Front Reflection` Front Reflection Intensity (1D)
+    - `ADBE 3DText Front Gloss` Front Reflection Sharpness (1D)
+    - `ADBE 3DText Front Fresnel` Front Reflection Rolloff (1D)
+    - `ADBE 3DText Front Xparency` Front Transparency (1D)
+    - `ADBE 3DText Front XparRoll` Front Transparency Rolloff (1D)
+    - `ADBE 3DText Front IOR` Front Index of Refraction (1D)
+    - `ADBE 3DText Bevel RGB` Bevel Color (colour)
+    - `ADBE 3DText Bevel Hue` Bevel Hue (1D)
+    - `ADBE 3DText Bevel Sat` Bevel Saturation (1D)
+    - `ADBE 3DText Bevel Bright` Bevel Brightness (1D)
+    - `ADBE 3DText Bevel Opacity` Bevel Opacity (1D)
+    - `ADBE 3DText Bevel Ambient` Bevel Ambient (1D)
+    - `ADBE 3DText Bevel Diffuse` Bevel Diffuse (1D)
+    - `ADBE 3DText Bevel Specular` Bevel Specular Intensity (1D)
+    - `ADBE 3DText Bevel Shininess` Bevel Specular Shininess (1D)
+    - `ADBE 3DText Bevel Metal` Bevel Metal (1D)
+    - `ADBE 3DText Bevel Reflection` Bevel Reflection Intensity (1D)
+    - `ADBE 3DText Bevel Gloss` Bevel Reflection Sharpness (1D)
+    - `ADBE 3DText Bevel Fresnel` Bevel Reflection Rolloff (1D)
+    - `ADBE 3DText Bevel Xparency` Bevel Transparency (1D)
+    - `ADBE 3DText Bevel XparRoll` Bevel Transparency Rolloff (1D)
+    - `ADBE 3DText Bevel IOR` Bevel Index of Refraction (1D)
+    - `ADBE 3DText Side RGB` Side Color (colour)
+    - `ADBE 3DText Side Hue` Side Hue (1D)
+    - `ADBE 3DText Side Sat` Side Saturation (1D)
+    - `ADBE 3DText Side Bright` Side Brightness (1D)
+    - `ADBE 3DText Side Opacity` Side Opacity (1D)
+    - `ADBE 3DText Side Ambient` Side Ambient (1D)
+    - `ADBE 3DText Side Diffuse` Side Diffuse (1D)
+    - `ADBE 3DText Side Specular` Side Specular Intensity (1D)
+    - `ADBE 3DText Side Shininess` Side Specular Shininess (1D)
+- `ADBE Text Selector` Range Selector 1
+  - `ADBE Text Percent Start` Start (1D)
+  - `ADBE Text Percent End` End (1D)
+  - `ADBE Text Percent Offset` Offset (1D)
+  - `ADBE Text Index Start` Start (1D)
+  - `ADBE Text Index End` End (1D)
+  - `ADBE Text Index Offset` Offset (1D)
+  - `ADBE Text Range Advanced` Advanced (group)
+    - `ADBE Text Range Units` Units (1D)
+    - `ADBE Text Range Type2` Based On (1D)
+    - `ADBE Text Selector Mode` Mode (1D · hold only)
+    - `ADBE Text Selector Max Amount` Amount (1D)
+    - `ADBE Text Range Shape` Shape (1D)
+    - `ADBE Text Selector Smoothness` Smoothness (1D)
+    - `ADBE Text Levels Max Ease` Ease High (1D)
+    - `ADBE Text Levels Min Ease` Ease Low (1D)
+    - `ADBE Text Randomize Order` Randomize Order (1D)
+    - `ADBE Text Random Seed` Random Seed (1D)
+- `ADBE Text Wiggly Selector` Wiggly Selector 1
+  - `ADBE Text Selector Mode` Mode (1D · hold only)
+  - `ADBE Text Wiggly Max Amount` Max Amount (1D)
+  - `ADBE Text Wiggly Min Amount` Min Amount (1D)
+  - `ADBE Text Range Type2` Based On (1D)
+  - `ADBE Text Temporal Freq` Wiggles/Second (1D · hold only)
+  - `ADBE Text Character Correlation` Correlation (1D · hold only)
+  - `ADBE Text Temporal Phase` Temporal Phase (1D)
+  - `ADBE Text Spatial Phase` Spatial Phase (1D)
+  - `ADBE Text Wiggly Lock Dim` Lock Dimensions (1D · hold only)
+  - `ADBE Text Wiggly Random Seed` Random Seed (1D)
+- `ADBE Text Expressible Selector` Expression Selector 1
+  - `ADBE Text Range Type2` Based On (1D)
+  - `ADBE Text Expressible Amount` Amount (3D)
+- `ADBE Text Anchor Point 3D` Anchor Point
+- `ADBE Text Position 3D` Position
+- `ADBE Text Scale 3D` Scale
+- `ADBE Text Skew` Skew
+- `ADBE Text Skew Axis` Skew Axis
+- `ADBE Text Rotation` Rotation
+- `ADBE Text Rotation X` X Rotation
+- `ADBE Text Rotation Y` Y Rotation
+- `ADBE Text Opacity` Opacity
+- `ADBE Text Fill Color` Fill Color
+- `ADBE Text Stroke Color` Stroke Color
+- `ADBE Text Fill Hue` Fill Hue
+- `ADBE Text Stroke Width` Stroke Width
+- `ADBE Text Tracking Amount` Tracking Amount
+- `ADBE Text Line Spacing` Line Spacing
+- `ADBE Text Character Offset` Character Offset
+- `ADBE Text Blur` Blur
+- `ADBE Text Fill Opacity` Fill Opacity
+- `ADBE Text Stroke Opacity` Stroke Opacity
+- `ADBE Text Fill Brightness` Fill Brightness
+- `ADBE Text Fill Saturation` Fill Saturation
+
+## Effects (with their parameters)
+
+- `ADBE Angle Control` **Angle Control**: `ADBE Angle Control-0001` Angle
+- `ADBE Box Blur2` **Fast Box Blur**: `ADBE Box Blur2-0001` Blur Radius, `ADBE Box Blur2-0002` Iterations, `ADBE Box Blur2-0003` Blur Dimensions (hold), `ADBE Box Blur2-0004` Repeat Edge Pixels (hold)
+- `ADBE Checkbox Control` **Checkbox Control**: `ADBE Checkbox Control-0001` Checkbox (hold)
+- `ADBE Color Control` **Color Control**: `ADBE Color Control-0001` Color
+- `ADBE CurvesCustom` **Curves**: `ADBE CurvesCustom-0002` Channel:, `ADBE CurvesCustom-0001` Curves
+- `ADBE Drop Shadow` **Drop Shadow**: `ADBE Drop Shadow-0001` Shadow Color, `ADBE Drop Shadow-0002` Opacity, `ADBE Drop Shadow-0003` Direction, `ADBE Drop Shadow-0004` Distance, `ADBE Drop Shadow-0005` Softness, `ADBE Drop Shadow-0006` Shadow Only (hold)
+- `ADBE Dropdown Control` **Dropdown Menu Control**: `Pseudo/@@9w28GsJ8Qoe8a9Avcc1Psw-0001` Menu (hold)
+- `ADBE Fast Blur` **Fast Blur (Legacy)**: `ADBE Fast Blur-0001` Blurriness, `ADBE Fast Blur-0002` Blur Dimensions (hold), `ADBE Fast Blur-0003` Repeat Edge Pixels (hold)
+- `ADBE Fill` **Fill**: `ADBE Fill-0001` Fill Mask, `ADBE Fill-0007` All Masks, `ADBE Fill-0002` Color, `ADBE Fill-0006` Invert (hold), `ADBE Fill-0003` Horizontal Feather, `ADBE Fill-0004` Vertical Feather, `ADBE Fill-0005` Opacity
+- `ADBE Gaussian Blur 2` **Gaussian Blur**: `ADBE Gaussian Blur 2-0001` Blurriness, `ADBE Gaussian Blur 2-0002` Blur Dimensions (hold), `ADBE Gaussian Blur 2-0003` Repeat Edge Pixels (hold)
+- `ADBE Glo2` **Glow**: `ADBE Glo2-0001` Glow Based On (hold), `ADBE Glo2-0002` Glow Threshold, `ADBE Glo2-0003` Glow Radius, `ADBE Glo2-0004` Glow Intensity, `ADBE Glo2-0005` Composite Original (hold), `ADBE Glo2-0006` Glow Operation (hold), `ADBE Glo2-0007` Glow Colors (hold), `ADBE Glo2-0008` Color Looping (hold) … 15 params
+- `ADBE Layer Control` **Layer Control**: `ADBE Layer Control-0001` Layer
+- `ADBE Linear Wipe` **Linear Wipe**: `ADBE Linear Wipe-0001` Transition Completion, `ADBE Linear Wipe-0002` Wipe Angle, `ADBE Linear Wipe-0003` Feather
+- `ADBE Lumetri` **Lumetri Color**: `ADBE Lumetri-0001` Blob, `ADBE Lumetri-0062` High Dynamic Range, `ADBE Lumetri-0003` Active, `ADBE Lumetri-0004`  , `ADBE Lumetri-0095`  , `ADBE Lumetri-0005` Input LUT, `ADBE Lumetri-0127` Input LUT … 120 params
+- `ADBE Motion Blur` **Directional Blur**: `ADBE Motion Blur-0001` Direction, `ADBE Motion Blur-0002` Blur Length
+- `ADBE OFMotionBlur` **Pixel Motion Blur**: `ADBE OFMotionBlur-0001` Shutter Control, `ADBE OFMotionBlur-0002` Shutter Angle, `ADBE OFMotionBlur-0003` Shutter Samples, `ADBE OFMotionBlur-0004` Vector Detail
+- `ADBE Offset` **Offset**: `ADBE Offset-0001` Shift Center To, `ADBE Offset-0002` Blend With Original
+- `ADBE Point Control` **Point Control**: `ADBE Point Control-0001` Point
+- `ADBE Point3D Control` **3D Point Control**: `ADBE Point3D Control-0001` 3D Point
+- `ADBE Ramp` **Gradient Ramp**: `ADBE Ramp-0001` Start of Ramp, `ADBE Ramp-0002` Start Color, `ADBE Ramp-0003` End of Ramp, `ADBE Ramp-0004` End Color, `ADBE Ramp-0005` Ramp Shape (hold), `ADBE Ramp-0006` Ramp Scatter, `ADBE Ramp-0007` Blend With Original … 9 params
+- `ADBE Simple Choker` **Simple Choker**: `ADBE Simple Choker-0001` View (hold), `ADBE Simple Choker-0002` Choke Matte
+- `ADBE Slider Control` **Slider Control**: `ADBE Slider Control-0001` Slider
+- `ADBE SubspaceStabilizer` **Warp Stabilizer**: `ADBE SubspaceStabilizer-0019` Result, `ADBE SubspaceStabilizer-0020` Smoothness, `ADBE SubspaceStabilizer-0028` Method, `ADBE SubspaceStabilizer-0044` Preserve Scale … 38 params
+- `ADBE Tile` **Motion Tile**: `ADBE Tile-0001` Tile Center, `ADBE Tile-0002` Tile Width, `ADBE Tile-0003` Tile Height, `ADBE Tile-0004` Output Width, `ADBE Tile-0005` Output Height, `ADBE Tile-0006` Mirror Edges (hold), `ADBE Tile-0007` Phase, `ADBE Tile-0008` Horizontal Phase Shift (hold) … 9 params
+- `ADBE Timewarp` **Timewarp**: `ADBE Timewarp-0001` Method, `ADBE Timewarp-0002` Adjust Time By, `ADBE Timewarp-0003` Speed, `ADBE Timewarp-0004` Source Frame, `ADBE Timewarp-0006` Vector Detail, `ADBE Timewarp-0008` Global Smoothness … 39 params
+- `ADBE Tint` **Tint**: `ADBE Tint-0001` Map Black To, `ADBE Tint-0002` Map White To, `ADBE Tint-0003` Amount to Tint
+- `ADBE Turbulent Displace` **Turbulent Displace**: `ADBE Turbulent Displace-0001` Displacement (hold), `ADBE Turbulent Displace-0002` Amount, `ADBE Turbulent Displace-0003` Size, `ADBE Turbulent Displace-0004` Offset (Turbulence), `ADBE Turbulent Displace-0005` Complexity, `ADBE Turbulent Displace-0006` Evolution, `ADBE Turbulent Displace-0008` Cycle Evolution (hold) … 15 params
+- `ADBE Venetian Blinds` **Venetian Blinds**: `ADBE Venetian Blinds-0001` Transition Completion, `ADBE Venetian Blinds-0002` Direction, `ADBE Venetian Blinds-0003` Width, `ADBE Venetian Blinds-0004` Feather
+- `ADBE Wave Warp` **Wave Warp**: `ADBE Wave Warp-0001` Wave Type (hold), `ADBE Wave Warp-0002` Wave Height, `ADBE Wave Warp-0003` Wave Width, `ADBE Wave Warp-0004` Direction, `ADBE Wave Warp-0005` Wave Speed (hold), `ADBE Wave Warp-0006` Pinning (hold), `ADBE Wave Warp-0007` Phase, `ADBE Wave Warp-0008` Antialiasing (Best Quality) (hold) … 9 params
+- `CC Bend It` **CC Bend It**: `CC Bend It-0001` Bend, `CC Bend It-0002` Start, `CC Bend It-0003` End, `CC Bend It-0004` Render Prestart (hold), `CC Bend It-0005` Distort (hold)
+- `CC Bubbles` **CC Bubbles**: `CC Bubbles-0001` Bubble Amount, `CC Bubbles-0002` Bubble Speed, `CC Bubbles-0003` Wobble Amplitude, `CC Bubbles-0004` Wobble Frequency, `CC Bubbles-0005` Bubble Size, `CC Bubbles-0006` Reflection Type (hold), `CC Bubbles-0007` Shading Type (hold)
+- `CC Burn Film` **CC Burn Film**: `CC Burn Film-0001` Burn, `CC Burn Film-0002` Center, `CC Burn Film-0003` Random Seed
+- `CC Composite` **CC Composite (obsolete)**: `CC Composite-0001` Opacity, `CC Composite-0002` Composite Original, `CC Composite-0003` RGB Only (hold)
+- `CC Cylinder` **CC Cylinder**: `CC Cylinder-0002` Radius (%), `CC Cylinder-0004` Position X, `CC Cylinder-0005` Position Y, `CC Cylinder-0006` Position Z, `CC Cylinder-0009` Rotation X … 27 params
+- `CC Drizzle` **CC Drizzle**: `CC Drizzle-0001` Drip Rate, `CC Drizzle-0002` Longevity (sec), `CC Drizzle-0003` Rippling, `CC Drizzle-0004` Displacement, `CC Drizzle-0005` Ripple Height, `CC Drizzle-0006` Spreading, `CC Drizzle-0022` Using … 23 params
+- `CC Force Motion Blur` **CC Force Motion Blur**: `CC Force Motion Blur-0001` Motion Blur Samples, `CC Force Motion Blur-0002` Override Shutter Settings, `CC Force Motion Blur-0003` Shutter Angle, `CC Force Motion Blur-0005` Shutter Phase, `CC Force Motion Blur-0004` Native Motion Blur (hold)
+- `CC Glass Wipe` **CC Glass Wipe**: `CC Glass Wipe-0001` Completion, `CC Glass Wipe-0002` Layer to Reveal, `CC Glass Wipe-0003` Gradient Layer, `CC Glass Wipe-0004` Softness, `CC Glass Wipe-0005` Displacement Amount
+- `CC Grid Wipe` **CC Grid Wipe**: `CC Grid Wipe-0001` Completion, `CC Grid Wipe-0002` Center, `CC Grid Wipe-0003` Rotation, `CC Grid Wipe-0004` Border, `CC Grid Wipe-0005` Tiles, `CC Grid Wipe-0006` Shape (hold), `CC Grid Wipe-0007` Reverse Transition (hold)
+- `CC Image Wipe` **CC Image Wipe**: `CC Image Wipe-0001` Completion, `CC Image Wipe-0002` Border Softness, `CC Image Wipe-0003` Auto Softness (hold), `CC Image Wipe-0005` Layer, `CC Image Wipe-0006` Property (hold), `CC Image Wipe-0004` Blur, `CC Image Wipe-0007` Inverse Gradient (hold) … 10 params
+- `CC Jaws` **CC Jaws**: `CC Jaws-0001` Completion, `CC Jaws-0002` Center, `CC Jaws-0003` Direction, `CC Jaws-0004` Height, `CC Jaws-0005` Width, `CC Jaws-0006` Shape (hold)
+- `CC Kaleida` **CC Kaleida**: `CC Kaleida-0001` Center, `CC Kaleida-0002` Size, `CC Kaleida-0003` Mirroring (hold), `CC Kaleida-0004` Rotation, `CC Kaleida-0005` Floating Center (hold)
+- `CC Light Burst 2.5` **CC Light Burst 2.5**: `CC Light Burst 2.5-0001` Center, `CC Light Burst 2.5-0002` Intensity, `CC Light Burst 2.5-0003` Ray Length, `CC Light Burst 2.5-0004` Burst (hold), `CC Light Burst 2.5-0005` Halo Alpha (hold), `CC Light Burst 2.5-0006` Set Color, `CC Light Burst 2.5-0007` Color
+- `CC Light Rays` **CC Light Rays**: `CC Light Rays-0001` Intensity, `CC Light Rays-0002` Center, `CC Light Rays-0003` Radius, `CC Light Rays-0004` Warp Softness, `CC Light Rays-0005` Shape, `CC Light Rays-0006` Direction, `CC Light Rays-0007` Color from Source, `CC Light Rays-0010` Allow Brightening (hold) … 11 params
+- `CC Light Sweep` **CC Light Sweep**: `CC Light Sweep-0001` Center, `CC Light Sweep-0002` Direction, `CC Light Sweep-0003` Shape (hold), `CC Light Sweep-0004` Width, `CC Light Sweep-0005` Sweep Intensity, `CC Light Sweep-0006` Edge Intensity, `CC Light Sweep-0007` Edge Thickness, `CC Light Sweep-0008` Light Color … 10 params
+- `CC Light Wipe` **CC Light Wipe**: `CC Light Wipe-0001` Completion, `CC Light Wipe-0002` Center, `CC Light Wipe-0003` Intensity, `CC Light Wipe-0004` Shape, `CC Light Wipe-0005` Direction, `CC Light Wipe-0006` Color from Source, `CC Light Wipe-0007` Color, `CC Light Wipe-0008` Reverse Transition (hold) … 9 params
+- `CC Overbrights` **CC Overbrights**: `CC Overbrights-0001` Channel (hold), `CC Overbrights-0002` Clip Color
+- `CC Page Turn` **CC Page Turn**: `CC Page Turn-0008` Controls (hold), `CC Page Turn-0001` Fold Position, `CC Page Turn-0002` Fold Direction, `CC Page Turn-0003` Fold Radius, `CC Page Turn-0004` Light Direction, `CC Page Turn-0007` Render (hold), `CC Page Turn-0005` Back Page, `CC Page Turn-0009` Back Opacity … 10 params
+- `CC Particle Systems II` **CC Particle Systems II**: `CC Particle Systems II-0001` Birth Rate, `CC Particle Systems II-0002` Longevity (sec), `CC Particle Systems II-0004` Position, `CC Particle Systems II-0005` Radius X, `CC Particle Systems II-0006` Radius Y … 31 params
+- `CC Particle World` **CC Particle World**: `CC Particle World-0051` Position, `CC Particle World-0052` Radius, `CC Particle World-0053` Motion Path, `CC Particle World-0054` Motion Path Frames, `CC Particle World-0055` Grid, `CC Particle World-0056` Grid Position, `CC Particle World-0057` Grid Axis … 104 params
+- `CC Pixel Polly` **CC Pixel Polly**: `CC Pixel Polly-0001` Force, `CC Pixel Polly-0002` Gravity, `CC Pixel Polly-0003` Spinning, `CC Pixel Polly-0004` Force Center, `CC Pixel Polly-0005` Direction Randomness, `CC Pixel Polly-0006` Speed Randomness, `CC Pixel Polly-0007` Grid Spacing, `CC Pixel Polly-0008` Object (hold) … 10 params
+- `CC Power Pin` **CC Power Pin**: `CC Power Pin-0002` Top Left, `CC Power Pin-0003` Top Right, `CC Power Pin-0004` Bottom Left, `CC Power Pin-0005` Bottom Right, `CC Power Pin-0006` Perspective, `CC Power Pin-0007` Unstretch, `CC Power Pin-0009` Top … 13 params
+- `CC Radial Blur` **CC Radial Blur**: `CC Radial Blur-0001` Type (hold), `CC Radial Blur-0002` Amount, `CC Radial Blur-0003` Quality, `CC Radial Blur-0004` Center
+- `CC Radial Fast Blur` **CC Radial Fast Blur**: `CC Radial Fast Blur-0001` Center, `CC Radial Fast Blur-0002` Amount, `CC Radial Fast Blur-0003` Zoom (hold)
+- `CC Radial ScaleWipe` **CC Radial ScaleWipe**: `CC Radial ScaleWipe-0001` Completion, `CC Radial ScaleWipe-0002` Center, `CC Radial ScaleWipe-0003` Reverse Transition (hold)
+- `CC Rain` **CC Rain (obsolete)**: `CC Rain-0001` Amount, `CC Rain-0002` Speed, `CC Rain-0003` Angle, `CC Rain-0004` Angle Variation, `CC Rain-0005` Drop Size, `CC Rain-0006` Opacity, `CC Rain-0007` Source Depth
+- `CC RepeTile` **CC RepeTile**: `CC RepeTile-0001` Expand Right, `CC RepeTile-0002` Expand Left, `CC RepeTile-0003` Expand Down, `CC RepeTile-0004` Expand Up, `CC RepeTile-0005` Tiling, `CC RepeTile-0006` Blend Borders
+- `CC Scale Wipe` **CC Scale Wipe**: `CC Scale Wipe-0001` Stretch, `CC Scale Wipe-0002` Center, `CC Scale Wipe-0003` Direction
+- `CC Scatterize` **CC Scatterize**: `CC Scatterize-0001` Scatter, `CC Scatterize-0002` Right Twist, `CC Scatterize-0003` Left Twist, `CC Scatterize-0004` Transfer Mode (hold)
+- `CC Smear` **CC Smear**: `CC Smear-0001` From, `CC Smear-0002` To, `CC Smear-0003` Reach, `CC Smear-0004` Radius, `CC Smear-0005` Tip Type (hold)
+- `CC Snow` **CC Snow (obsolete)**: `CC Snow-0001` Amount, `CC Snow-0002` Speed, `CC Snow-0003` Amplitude, `CC Snow-0004` Frequency, `CC Snow-0005` Flake Size, `CC Snow-0006` Source Depth, `CC Snow-0007` Opacity
+- `CC Sphere` **CC Sphere**: `CC Sphere-0002` Rotation X, `CC Sphere-0003` Rotation Y, `CC Sphere-0004` Rotation Z, `CC Sphere-0026` Rotation Order (hold), `CC Sphere-0006` Radius, `CC Sphere-0007` Offset … 27 params
+- `CC Star Burst` **CC Star Burst**: `CC Star Burst-0004` Grid Spacing, `CC Star Burst-0005` Size, `CC Star Burst-0007` Shading, `CC Star Burst-0001` Scatter, `CC Star Burst-0002` Speed, `CC Star Burst-0003` Phase, `CC Star Burst-0006` Blend w. Original
+- `CC Tiler` **CC Tiler**: `CC Tiler-0001` Scale, `CC Tiler-0002` Center, `CC Tiler-0003` Blend w. Original
+- `CC Toner` **CC Toner**: `CC Toner-0005` Tones (hold), `CC Toner-0001` Highlights, `CC Toner-0006` Brights, `CC Toner-0002` Midtones, `CC Toner-0007` Darktones, `CC Toner-0003` Shadows, `CC Toner-0004` Blend w. Original
+- `CC Twister` **CC Twister**: `CC Twister-0002` Completion, `CC Twister-0001` Backside, `CC Twister-0003` Shading (hold), `CC Twister-0004` Center, `CC Twister-0005` Axis
+- `CC Vector Blur` **CC Vector Blur**: `CC Vector Blur-0001` Type, `CC Vector Blur-0002` Amount, `CC Vector Blur-0003` Angle Offset, `CC Vector Blur-0004` Ridge Smoothness, `CC Vector Blur-0005` Vector Map, `CC Vector Blur-0006` Property (hold), `CC Vector Blur-0007` Map Softness
+- `CC WarpoMatic` **CC WarpoMatic**: `CC WarpoMatic-0001` Completion, `CC WarpoMatic-0002` Layer to Reveal, `CC WarpoMatic-0003` Reactor (hold), `CC WarpoMatic-0004` Smoothness, `CC WarpoMatic-0005` Warp Amount, `CC WarpoMatic-0006` Warp Direction (hold), `CC WarpoMatic-0007` Blend Span
+- `CC Wide Time` **CC Wide Time**: `CC Wide Time-0001` Forward Steps, `CC Wide Time-0002` Backward Steps, `CC Wide Time-0003` Native Motion Blur (hold)
+- `CS BlockLoad` **CC Block Load**: `CS BlockLoad-0001` Completion, `CS BlockLoad-0002` Scans, `CS BlockLoad-0003` Start Cleared (hold), `CS BlockLoad-0004` Bilinear (hold)
+- `CS Composite` **CC Composite**: `CS Composite-0004` Top Layer, `CS Composite-0001` Opacity, `CS Composite-0002` Transfer Mode, `CS Composite-0003` RGB Only (hold)
+- `CS CrossBlur` **CC Cross Blur**: `CS CrossBlur-0001` Radius X, `CS CrossBlur-0002` Radius Y, `CS CrossBlur-0003` Transfer Mode (hold), `CS CrossBlur-0004` Repeat Edge Pixels (hold)
+- `CS LineSweep` **CC Line Sweep**: `CS LineSweep-0001` Completion, `CS LineSweep-0002` Direction, `CS LineSweep-0003` Thickness, `CS LineSweep-0004` Slant, `CS LineSweep-0005` Flip Direction (hold)
+- `CS Vignette` **CC Vignette**: `CS Vignette-0001` Amount, `CS Vignette-0002` Angle of View, `CS Vignette-0003` Center, `CS Vignette-0005` Pin Highlights
+- `Keylight 906` **Keylight (1.2)**: `Keylight 906-0002` View, `Keylight 906-0003` Unpremultiply Result (hold), `Keylight 906-0004` Screen Colour, `Keylight 906-0005` Screen Gain, `Keylight 906-0006` Screen Balance, `Keylight 906-0007` Despill Bias, `Keylight 906-0008` Alpha Bias … 80 params
+- `ADBE GROW BOUNDS` **Grow Bounds**: `ADBE GROW BOUNDS-0001` Pixels (put it before Scatterize / particles so they are not clipped)
+- `ADBE OCIO Display Transform` **OCIO Display Transform** (used by colour-managed frame capture)

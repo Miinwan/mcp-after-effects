@@ -1,12 +1,21 @@
 // Effect operations — add, remove, set property.
 
-import { registerOp, jsxVal, jsxCompLayerPreamble } from "../registry.js";
+import { registerOp, jsxVal, jsxCompLayerPreamble, jsxFail } from "../registry.js";
+
+/**
+ * Effects that open a modal picker the moment a script adds them, blocking
+ * every further script until someone answers it (measured on AE 26.5).
+ */
+export const EFFECTS_THAT_PROMPT: Record<string, string> = {
+  "ADBE Apply Color LUT2":
+    "Apply Color LUT opens a 'Choose LUT File...' picker when added by script, and After Effects runs no script until it is answered. Add it by hand, or grade with Lumetri (color.setup handles the QT gamma LUT).",
+};
 
 registerOp({
   name: "effect.add",
   category: "effect",
   description:
-    "Add an effect to a layer by matchName. Use ae_do project.list_effects (or effect.list_on_layer on a reference layer) to find matchNames.",
+    "Add an effect to a layer by matchName. Use ae_do project.list_effects (or effect.list_on_layer on a reference layer) to find matchNames. The name is checked with canAddProperty first (an unknown matchName can crash After Effects instead of failing); effects that open a file picker on add (Apply Color LUT) are refused.",
   params: [
     { name: "comp", type: "any", description: "Comp name or id", required: true },
     {
@@ -29,9 +38,14 @@ registerOp({
     },
   ],
   toJsx(args) {
+    const prompt = EFFECTS_THAT_PROMPT[String(args.matchName)];
+    if (prompt) return jsxFail(prompt);
     return `
             ${jsxCompLayerPreamble(args)}
-            var _fx = _layer.property("Effects").addProperty(${jsxVal(args.matchName)});
+            var _par = _layer.property("ADBE Effect Parade");
+            if (!_par) return { ok: false, error: "this layer has no Effects group" };
+            if (!_par.canAddProperty(${jsxVal(args.matchName)})) return { ok: false, error: "After Effects has no effect with matchName " + ${jsxVal(String(args.matchName))} + " (or it cannot go on this layer); list installed ones with project.list_effects" };
+            var _fx = _par.addProperty(${jsxVal(args.matchName)});
             ${args.name ? `_fx.name = ${jsxVal(args.name)};` : ""}
             return { ok: true, effectIndex: _fx.propertyIndex, name: _fx.name, matchName: _fx.matchName };
         `;

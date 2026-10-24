@@ -186,7 +186,8 @@ registerOp({
                 return { ok: false, error: "not a property group that supports addProperty" };
             }
             if (!_canAdd) return { ok: false, error: "group '" + _node.matchName + "' cannot add '" + _mn + "'" };
-            var _added = _node.addProperty(_mn);
+            var _added = null;
+            try { _added = AE.safeAddProperty(_node, _mn); } catch (eAdd) { return { ok: false, error: AE.errText(eAdd) }; }
             ${renameJsx}
             return { ok: true, name: _added.name, matchName: _added.matchName, propertyIndex: _added.propertyIndex };
         `;

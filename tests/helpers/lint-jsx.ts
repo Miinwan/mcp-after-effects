@@ -330,6 +330,38 @@ export function findTernaryChains(text: string): number[] {
   return hits;
 }
 
+// ES3 reserved words. Measured in After Effects 26.5: a bare one as an object
+// key (`{ char: 1 }`) or a variable name is "Illegal use of reserved word";
+// a quoted key ("class": 1) and dot access (o.default) do run.
+const ES3_RESERVED =
+  "abstract|boolean|byte|char|class|const|debugger|default|delete|do|double|enum|export|extends|final|float|goto|implements|import|in|instanceof|int|interface|long|native|package|private|protected|public|short|static|super|synchronized|throws|transient|volatile|with";
+
+rules.push({
+  id: "es3-reserved-key",
+  description:
+    "ES3 reserved word used as a bare object key or variable name — ExtendScript stops with 'Illegal use of reserved word'. Rename it, or quote the key.",
+  regex: new RegExp(
+    `(?:[{,]\\s*(?:${ES3_RESERVED})\\s*:(?!:))|(?:\\bvar\\s+(?:${ES3_RESERVED})\\b)`,
+  ),
+  severity: "error",
+});
+
+/** Offsets of trailing commas (`, }` / `, ]`) in comment- and string-free text. */
+export function findTrailingCommas(text: string): number[] {
+  const hits: number[] = [];
+  const re = /,\s*[}\]]/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text))) hits.push(m.index);
+  return hits;
+}
+
+export const TRAILING_COMMA_RULE = {
+  id: "es3-trailing-comma",
+  description:
+    "Trailing comma in an object or array literal — a syntax error in ExtendScript or an extra undefined element.",
+  severity: "error" as const,
+};
+
 export const TERNARY_CHAIN_RULE = {
   id: "es3-ternary-chain",
   description:
@@ -414,6 +446,17 @@ export function lintJsxFile(filePath: string): LintFinding[] {
       rule: TERNARY_CHAIN_RULE.id,
       severity: TERNARY_CHAIN_RULE.severity,
       description: TERNARY_CHAIN_RULE.description,
+      text: (lines[line - 1] ?? "").trim(),
+    });
+  }
+  for (const offset of findTrailingCommas(cleanText)) {
+    const line = cleanText.slice(0, offset).split("\n").length;
+    findings.push({
+      file: filePath,
+      line,
+      rule: TRAILING_COMMA_RULE.id,
+      severity: TRAILING_COMMA_RULE.severity,
+      description: TRAILING_COMMA_RULE.description,
       text: (lines[line - 1] ?? "").trim(),
     });
   }

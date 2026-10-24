@@ -950,6 +950,7 @@ registerOp({
             for (var _k in _props) {
                 if (!_props.hasOwnProperty(_k)) continue;
                 try {
+                    if (!_animProps.canAddProperty(_k)) { _w.push(_k + ": not an animator property After Effects can add"); continue; }
                     var _ap = _animProps.addProperty(_k);
                     if (_props[_k] !== null) _ap.setValue(_props[_k]);
                     _added.push(_k);
