@@ -161,6 +161,25 @@ export const ANIM_FN = `
         if (rest.length > 2) p.push(rest[2]);
         return p;
     }
+    // Fitted presets carry speeds in v units per unit of duration: scale them
+    // like the values. Spatial Position takes a speed along the path
+    // (magnitude); separated X/Y take one signed speed per follower.
+    function _animSpeed(which, rest, s, dirV, dist, dur, prop) {
+        if (which === "opacity") return rest * s / dur;
+        if (which === "rotation" || which === "rotateY" || _animIsFx(which)) return s / dur;
+        if (which === "scale") {
+            var sv = (s instanceof Array) ? s : [s, s];
+            var o = [rest[0] * sv[0] / dur, rest[1] * sv[1] / dur];
+            if (rest.length > 2) o.push(rest[2] * sv[0] / dur);
+            return o;
+        }
+        if (AE.separationFollowers(prop)) {
+            var ps = [dirV[0] * dist * s / dur, dirV[1] * dist * s / dur];
+            if (rest.length > 2) ps.push(0);
+            return ps;
+        }
+        return Math.abs(dist * s) / dur;
+    }
     function _animWipeAngle(name) {
         if (name === "right") return 270;
         if (name === "up") return 180;
@@ -245,6 +264,8 @@ export const ANIM_FN = `
                     outInfluence: ks.o
                 };
                 if (ks.interp) spec.interp = ks.interp;
+                if (ks.si !== undefined) spec.inSpeed = _animSpeed(tr.prop, rests[tr.prop], ks.si, dirV, dist, dur, p);
+                if (ks.so !== undefined) spec.outSpeed = _animSpeed(tr.prop, rests[tr.prop], ks.so, dirV, dist, dur, p);
                 specs.push(spec);
             }
             var res = AE.applyKeySpecs(p, specs, { spatialTangents: "linear" });

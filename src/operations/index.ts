@@ -39,6 +39,7 @@ import "./bridge.js";
 import "./logo.js";
 import "./export.js";
 import "./cleanup.js";
+import "./curve.js";
 
 // eval.run executes arbitrary ExtendScript (file I/O, system.callSystem,
 // Socket, …). Opt-in: it enters the registry only when AE_MCP_ENABLE_EVAL=1

@@ -85,8 +85,10 @@ describe("motion presets", () => {
     const out = motion.presetJob("pop_out");
     const a = inn.tracks[0].keys;
     const b = out.tracks[0].keys;
-    expect(b.map((k) => k.t)).toEqual(a.map((k) => 1 - k.t).reverse());
+    expect(b.map((k) => k.t)).toEqual(a.map((k) => Math.round((1 - k.t) * 10000) / 10000).reverse());
     expect(b[0].o).toBe(a[a.length - 1].i);
+    // fitted keys: sides swap and speeds change sign when time runs backwards
+    expect(b[0].so).toEqual((a[a.length - 1].si as number[]).map((x) => (x === 0 ? 0 : -x)));
     expect(b[b.length - 1].v).toEqual([0, 0]);
     expect(out.kind).toBe("out");
   });

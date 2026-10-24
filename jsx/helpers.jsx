@@ -846,6 +846,8 @@ AE.applyKeys = function (prop, keys) {
 // dimensions; everything else takes one per dimension. Same contract as the
 // keyframe.set_easing operation — this is its eval.run twin.
 // Speeds default to 0 (ease-style handles). Influence range is 0.1–100.
+// A speed may be an array (one per dimension, e.g. a Scale move whose X and Y
+// travel different amounts); spatial properties use its first entry.
 AE.setEase = function (prop, keyIndex, inInfluence, outInfluence, inSpeed, outSpeed) {
     if (inSpeed === undefined) inSpeed = 0;
     if (outSpeed === undefined) outSpeed = 0;
@@ -859,9 +861,13 @@ AE.setEase = function (prop, keyIndex, inInfluence, outInfluence, inSpeed, outSp
         try { var v = prop.keyValue(keyIndex); if (v && v.length) dims = v.length; } catch (eV) {}
     }
     var inArr = [], outArr = [];
+    function pick(sp, d) {
+        if (sp instanceof Array) return sp.length ? sp[d < sp.length ? d : sp.length - 1] : 0;
+        return sp;
+    }
     for (var d = 0; d < dims; d++) {
-        inArr.push(new KeyframeEase(inSpeed, inInfluence));
-        outArr.push(new KeyframeEase(outSpeed, outInfluence));
+        inArr.push(new KeyframeEase(pick(inSpeed, d), inInfluence));
+        outArr.push(new KeyframeEase(pick(outSpeed, d), outInfluence));
     }
     prop.setTemporalEaseAtKey(keyIndex, inArr, outArr);
     prop.setInterpolationTypeAtKey(keyIndex, KeyframeInterpolationType.BEZIER, KeyframeInterpolationType.BEZIER);

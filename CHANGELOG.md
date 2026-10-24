@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Measured easing**: `keyframe.fit_curve` writes bezier keys fitted to a source curve (spring, back, expo, bounce, cubic-bezier, CSS keywords) or to a sampled channel: keys on whole frames, every turning point a real key, the source's speed at each key and influences searched until the error at every frame and 4 sub-frames is under 2 % of the move; `keyframe.verify_curve` (read-only) samples what AE plays and reports the largest error and the timing error of the 50 % crossing, arrival and peak. Fitting runs on the server side (`src/ease-fit.ts`), no Python; method after the ae-builder skill by 100x Engineers. Ease speeds can be given per dimension.
 - **Motion library (`motion.ts`)**: `anim.apply` entrance / exit / accent presets (fade, rise, slide, scale, pop, drop, rotate, blur, wipe, stretch, push, whip, flip, swing, zoom blur, pulse, shake, nudge, Ken Burns) that keep the layer's final values, ease 15/85 and switch on motion blur; `anim.loop` (float, sway, pulse, wiggle, spin, twinkle, hop, flutter) added on top of the base value and driven by Slider Controls for hand tuning; `anim.apply_plan` applies a whole plan as one undo step; `expression.apply_preset` (inertia, bounce back, elastic, loop, wiggle X/Y, looping wiggle, speed control).
 - **Editing existing animation**: `anim.adjust` (shift, stretch, compress, re-ease existing keys, ripple, re-stagger), `anim.review` (flags linear keys, missing motion blur, no stagger, tempo too fast or slow, text on screen too briefly) and `anim.polish` (fixes those in place).
 - **Templates**: `template.lower_third`, `template.title_card`, `template.logo_reveal` (pop, blur, particle with Grow Bounds set before Scatterize), `template.transition` (flash, wipe, circle, slide panels, with `start`), all reading fonts and colours from the brand kit.
@@ -26,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Phase-2 presets with overshoot or bounce (`pop`, `drop`, `flip`, `stretch`, `swing`, and `rise`/`slide` with `overshoot`) are now fitted to a physical curve (back ease, gravity with a hop, damped spring) instead of hand-set keys, which were 9 to 36 % off; entrances and exits are within 0.5 %, and their keys carry speeds.
 - Machine-specific paths (logo library) come from environment variables or a git-ignored `config.local.json`.
 - Package renamed to `mcp-after-effects`.
 

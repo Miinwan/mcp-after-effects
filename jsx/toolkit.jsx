@@ -242,6 +242,14 @@ AE.applyKeySpecs = function (prop, specs, opts) {
         }
         for (i = 0; i < specs.length; i++) {
             s = specs[i];
+            // Per-dimension speeds go to their own follower (X/Y Position).
+            if (targets.length > 1 && (s.inSpeed instanceof Array || s.outSpeed instanceof Array)) {
+                var sc = {};
+                for (var sk in s) { if (s.hasOwnProperty(sk)) sc[sk] = s[sk]; }
+                if (s.inSpeed !== undefined) sc.inSpeed = AE._componentFor(s.inSpeed, ti, targets.length);
+                if (s.outSpeed !== undefined) sc.outSpeed = AE._componentFor(s.outSpeed, ti, targets.length);
+                s = sc;
+            }
             var ki = tp.nearestKeyIndex(s.time);
             try { AE.applyKeyInterp(tp, ki, s, opts.interp); }
             catch (eI) { warnings.push("key " + (i + 1) + " (t=" + s.time + "): " + AE.errText(eI)); }

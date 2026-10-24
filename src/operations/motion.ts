@@ -9,6 +9,7 @@
 // preset keeps whatever final value the layer already has.
 
 import { jsxCompPreamble, jsxFail, jsxVal, registerOp, type OperationParam } from "../registry.js";
+import { backWithPeak, fitUnit, gravityHop, spring, type CurveFn } from "../ease-fit.js";
 import { ANIM_EDIT_FN, ANIM_FN } from "./snippets.js";
 import { hexToRgb, loadBrand, type BrandKit } from "./studio.js";
 import { isTextPreset, shineJob, textJob, type ShineJob, type TextJob } from "./text-motion.js";
@@ -27,6 +28,9 @@ interface Key {
   i: number;
   o: number;
   interp?: string;
+  /** In / out speed in v units per unit of the preset's duration (fitted presets only; default 0). */
+  si?: number | number[];
+  so?: number | number[];
 }
 
 interface Track {
@@ -52,6 +56,41 @@ interface EaseCtx {
   os: number;
 }
 
+/**
+ * Keys fitted to a physical curve: v = from + (to − from)·f(u), with the
+ * fitted speeds and influences (ease-fit.fitUnit, within 0.5 % of the curve).
+ * Overshoots and bounces are real keys at the turning points; easeStrength
+ * does not apply because the curve is the physics.
+ */
+function physical(id: string, f: CurveFn, from: number | number[], to: number | number[]): Key[] {
+  const r = (n: number) => Math.round(n * 1e5) / 1e5;
+  return fitUnit(id, f).map((k) => {
+    if (Array.isArray(from)) {
+      const b = to as number[];
+      return {
+        t: r(k.t),
+        v: from.map((a, d) => r(a + (b[d] - a) * k.v)),
+        si: from.map((a, d) => r((b[d] - a) * k.inSpeed)),
+        so: from.map((a, d) => r((b[d] - a) * k.outSpeed)),
+        i: k.inInfluence,
+        o: k.outInfluence,
+      };
+    }
+    const b = to as number;
+    return {
+      t: r(k.t),
+      v: r(from + (b - from) * k.v),
+      si: r((b - from) * k.inSpeed),
+      so: r((b - from) * k.outSpeed),
+      i: k.inInfluence,
+      o: k.outInfluence,
+    };
+  });
+}
+
+/** Overshooting ease (back) peaking `os` past the target. */
+const overshoot = (os: number) => backWithPeak(1 + os);
+
 const fade = (until: number): Track => ({
   prop: "opacity",
   keys: [
@@ -60,16 +99,16 @@ const fade = (until: number): Track => ({
   ],
 });
 
-/** Position from `1 × distance` to rest, with an optional overshoot past it. */
+/** Position from `1 × distance` to rest, with an optional (fitted) overshoot past it. */
 function travel(e: EaseCtx): Track {
-  const keys: Key[] = [{ t: 0, v: 1, i: 33, o: e.A }];
-  if (e.os > 0) {
-    keys.push({ t: 0.7, v: -e.os, i: e.E, o: 40 });
-    keys.push({ t: 1, v: 0, i: 60, o: 33 });
-  } else {
-    keys.push({ t: 1, v: 0, i: e.E, o: 33 });
-  }
-  return { prop: "position", keys };
+  if (e.os > 0) return { prop: "position", keys: physical(`back${e.os}`, overshoot(e.os), 1, 0) };
+  return {
+    prop: "position",
+    keys: [
+      { t: 0, v: 1, i: 33, o: e.A },
+      { t: 1, v: 0, i: e.E, o: 33 },
+    ],
+  };
 }
 
 const ENTRANCES: Record<string, PresetDef> = {
@@ -123,17 +162,11 @@ const ENTRANCES: Record<string, PresetDef> = {
     direction: "left",
     distFactor: 0,
     duration: 0.6,
+    // Back ease peaking `overshoot` past full size (default 10 %), fitted.
     build: (e) => {
-      const peak = 1 + (e.os || 0.1);
+      const os = e.os || 0.1;
       return [
-        {
-          prop: "scale",
-          keys: [
-            { t: 0, v: [0, 0], i: 33, o: e.A },
-            { t: 0.6, v: [peak, peak], i: e.E, o: 40 },
-            { t: 1, v: [1, 1], i: 70, o: 33 },
-          ],
-        },
+        { prop: "scale", keys: physical(`back${os}`, overshoot(os), [0, 0], [1, 1]) },
         fade(0.25),
       ];
     },
@@ -143,21 +176,11 @@ const ENTRANCES: Record<string, PresetDef> = {
     direction: "up",
     distFactor: 0.3,
     duration: 0.9,
+    // Falls under gravity, hits at full speed, hops `overshoot` of the fall
+    // (default 12 %) and lands again: parabolas fitted, impacts are keys.
     build: (e) => {
       const hop = e.os || 0.12;
-      return [
-        {
-          prop: "position",
-          keys: [
-            // Falls: slow off the top, fastest at the impact.
-            { t: 0, v: 1, i: 33, o: 60 },
-            { t: 0.55, v: 0, i: 8, o: 45 },
-            { t: 0.78, v: hop, i: 60, o: 60 },
-            { t: 1, v: 0, i: 15, o: 33 },
-          ],
-        },
-        fade(0.25),
-      ];
+      return [{ prop: "position", keys: physical(`hop${hop}`, gravityHop(hop), 1, 0) }, fade(0.25)];
     },
   },
   rotate: {
@@ -219,15 +242,11 @@ const ENTRANCES: Record<string, PresetDef> = {
     direction: "left",
     distFactor: 0,
     duration: 0.7,
-    build: (e) => [
+    build: () => [
       {
+        // Squash settling on a damped spring (1 − e^−6u·cos 8u, 12 % overshoot).
         prop: "scale",
-        keys: [
-          { t: 0, v: [1.6, 0.15], i: 33, o: e.A },
-          { t: 0.55, v: [0.92, 1.1], i: 60, o: 40 },
-          { t: 0.8, v: [1.03, 0.98], i: 50, o: 50 },
-          { t: 1, v: [1, 1], i: 60, o: 33 },
-        ],
+        keys: physical("spring6x8", spring(6, 8), [1.6, 0.15], [1, 1]),
       },
       fade(0.25),
     ],
@@ -285,12 +304,9 @@ Object.assign(ENTRANCES, {
     duration: 0.7,
     build: (e: EaseCtx) => [
       {
+        // Swings 8° (+ 60° per unit of overshoot) past flat on a fitted back ease.
         prop: "rotateY",
-        keys: [
-          { t: 0, v: -90, i: 33, o: e.A },
-          { t: 0.75, v: 8 + e.os * 60, i: 70, o: 40 },
-          { t: 1, v: 0, i: 60, o: 33 },
-        ],
+        keys: physical(`back${(8 + e.os * 60) / 90}`, overshoot((8 + e.os * 60) / 90), -90, 0),
       },
       {
         prop: "opacity",
@@ -316,14 +332,9 @@ Object.assign(ENTRANCES, {
         ],
       },
       {
+        // Pendulum dying out: −14° · e^−2.5u · cos 11u, every swing a key.
         prop: "rotation",
-        keys: [
-          { t: 0, v: -14, i: 33, o: 50 },
-          { t: 0.3, v: 10, i: 60, o: 60 },
-          { t: 0.55, v: -6, i: 60, o: 60 },
-          { t: 0.78, v: 3, i: 60, o: 60 },
-          { t: 1, v: 0, i: 70, o: 33 },
-        ],
+        keys: physical("spring2.5x11", spring(2.5, 11), -14, 0),
       },
       fade(0.2),
     ],
@@ -437,10 +448,21 @@ function mirror(tracks: Track[]): Track[] {
   return tracks.map((tr) => ({
     prop: tr.prop,
     keys: tr.keys
-      .map((k) => ({ ...k, t: Math.round((1 - k.t) * 10000) / 10000, i: k.o, o: k.i }))
+      .map((k) => {
+        const m: Key = { ...k, t: Math.round((1 - k.t) * 10000) / 10000, i: k.o, o: k.i };
+        // Time runs backwards: the sides swap and the speeds change sign.
+        if (k.si !== undefined || k.so !== undefined) {
+          m.si = neg(k.so ?? 0);
+          m.so = neg(k.si ?? 0);
+        }
+        return m;
+      })
       .reverse(),
   }));
 }
+
+const neg = (s: number | number[]): number | number[] =>
+  Array.isArray(s) ? s.map((x) => (x === 0 ? 0 : -x)) : s === 0 ? 0 : -s;
 
 export interface PresetOptions {
   start?: number | null;
